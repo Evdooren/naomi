@@ -111,10 +111,11 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 </tw-passagedata><tw-passagedata pid="2" name="Som" tags="" position="759.5,388">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $score === 0&gt;&gt;
+Hier komt je eerste som!
 &lt;&lt;elseif $score === 1&gt;&gt;
 Je hebt nu $score punt.
 &lt;&lt;else&gt;&gt;
-Je hebt nu $score punten.
+Je hebt al $score punten.
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $answersGiven = 0&gt;&gt;
@@ -131,37 +132,38 @@ Je hebt nu $score punten.
 Hoeveel is $number1 + $number2?
 Je mag voor deze soms niet meer dan $maxAnswers keer klikken.
 
-Antwoord: &lt;&lt;set $answer to 10&gt;&gt;&lt;span id=&quot;answer&quot;&gt;&lt;&lt;print $answer&gt;&gt;&lt;/span&gt; \
-&lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
- &lt;&lt;link &quot;[-1]&quot;&gt;&gt;&lt;&lt;set $answer--&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
- &lt;&lt;link &quot;[+3]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+3&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
- &lt;&lt;link &quot;[-3]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-3&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
- &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
+Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;&lt;print $answer&gt;&gt;&lt;/span&gt;
+&lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
+ &lt;&lt;link &quot;[-1]&quot;&gt;&gt;&lt;&lt;set $answer--&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; 
+ &lt;&lt;link &quot;[+3]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+3&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
+ &lt;&lt;link &quot;[-3]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-3&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; 
+ &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;  
 
-[[Klaar|Dit is het goede antwoord!]]</tw-passagedata><tw-passagedata pid="3" name="Dit is het goede antwoord!" tags="" position="818.5,518">&lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
+[[Klaar|Dit is het goede antwoord!]]</tw-passagedata><tw-passagedata pid="3" name="Dit is het goede antwoord!" tags="" position="818.5,518">
+&lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
 	&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 		&lt;&lt;set $score = $score + 1&gt;&gt;
-Je antwoord is goed. Je hebt wel $answersGiven keer geklikt. Je mocht voor deze som maar $maxAnswers keer klikken. Je krijgt wel 1 punt.
-&lt;&lt;if $score &lt; 20&gt;&gt;
-Nog een [[som|Som2]]!
-&lt;&lt;else&gt;&gt; &lt;&lt;set $collection = $collection + 1&gt;&gt;
+Je antwoord is goed. Je hebt wel $answersGiven keer geklikt. Je mocht voor deze som maar $maxAnswers keer klikken. Je krijgt toch 1 punt.
+		&lt;&lt;if $score % 4 is 0&gt;&gt; &lt;&lt;set $collection = $collection + 1&gt;&gt;
 Je hebt genoeg punten gehaald. Je hebt een pokemon verdient. Ga maar gauw kijken in je [[verzameling|verzameling1]].
-&lt;&lt;/if&gt;&gt;
+		&lt;&lt;else&gt;&gt; 
+Nog een [[som|Som2]]!
+		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;else&gt;&gt;
 [[Probeer het nog eens|Som]].
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
+	&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 		&lt;&lt;set $score = $score + 2&gt;&gt;
 Goed zo! Dat is het goede antwoord. Je hebt $answersGiven keer geklikt. Je mocht voor deze som $maxAnswers keer klikken. Je krijgt daarom 2 punten!
-&lt;&lt;if $score &lt; 20&gt;&gt;
-Nog een [[som|Som2]]!
-&lt;&lt;else&gt;&gt; &lt;&lt;set $collection = $collection + 1&gt;&gt;
+		&lt;&lt;if $score % 4 is 0&gt;&gt; &lt;&lt;set $collection = $collection + 1&gt;&gt;
 Je hebt genoeg punten gehaald. Je hebt een pokemon verdient. Ga maar gauw kijken in je [[verzameling]].
-&lt;&lt;/if&gt;&gt;
+		&lt;&lt;else&gt;&gt;  
+Nog een [[som|Som2]]!
+		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;else&gt;&gt;
-[[Probeer het nog eens|Som]].
+Dat was niet goed. Probeer het [[nog eens|Som]].
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="InitSom" tags="" position="627.5,382">&lt;&lt;set $score = 0&gt;&gt;
 &lt;&lt;set $collection = 0&gt;&gt;
@@ -225,13 +227,8 @@ Antwoord: &lt;&lt;set $answer to 10&gt;&gt;&lt;span id=&quot;answer&quot;&gt;&lt
 27 5 4 4
 28 6 5 5
 29 5 4 4
-30 4 3 3</tw-passagedata><tw-passagedata pid="7" name="Naamloze passage 1" tags="" position="473.5,551.7272644042969">Antwoord: &lt;&lt;set $answer to 10&gt;&gt;&lt;span id=&quot;answer&quot;&gt;&lt;&lt;print $answer&gt;&gt;&lt;/span&gt; \
-( &lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
-| &lt;&lt;link &quot;[-1]&quot;&gt;&gt;&lt;&lt;set $answer--&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; )\
-| &lt;&lt;link &quot;[+3]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+3&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; )\
-| &lt;&lt;link &quot;[-3]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-3&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; )\
-| &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; )\
-| &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; ) </tw-passagedata><tw-passagedata pid="8" name="verzameling1" tags="" position="890.5,654">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $collection &gt;0 &gt;&gt;
+30 4 3 3</tw-passagedata><tw-passagedata pid="7" name="Naamloze passage 1" tags="" position="487.5,717.7272644042969">
+$scoreChecker</tw-passagedata><tw-passagedata pid="8" name="verzameling1" tags="" position="890.5,654">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $collection &gt;0 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/001.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $collection &gt;1 &gt;&gt;
@@ -246,112 +243,112 @@ Antwoord: &lt;&lt;set $answer to 10&gt;&gt;&lt;span id=&quot;answer&quot;&gt;&lt
 &lt;&lt;if $collection &gt;4 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/005.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;6 &gt;&gt;
+&lt;&lt;if $collection &gt;5 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/006.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;7 &gt;&gt;
+&lt;&lt;if $collection &gt;6 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/007.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;8 &gt;&gt;
+&lt;&lt;if $collection &gt;7 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/008.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;9 &gt;&gt;
+&lt;&lt;if $collection &gt;8 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/009.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;10 &gt;&gt;
+&lt;&lt;if $collection &gt;9 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/010.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;11 &gt;&gt;
+&lt;&lt;if $collection &gt;10 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/011.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;12 &gt;&gt;
+&lt;&lt;if $collection &gt;11 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/012.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;13 &gt;&gt;
+&lt;&lt;if $collection &gt;12 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/013.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;14&gt;&gt;
+&lt;&lt;if $collection &gt;13 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/014.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;15 &gt;&gt;
+&lt;&lt;if $collection &gt;14 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/015.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;16 &gt;&gt;
+&lt;&lt;if $collection &gt;15 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/016.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;17 &gt;&gt;
+&lt;&lt;if $collection &gt;16 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/017.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;18 &gt;&gt;
+&lt;&lt;if $collection &gt;17 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/018.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;19 &gt;&gt;
+&lt;&lt;if $collection &gt;18 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/019.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;20 &gt;&gt;
+&lt;&lt;if $collection &gt;19 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/020.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;21 &gt;&gt;
+&lt;&lt;if $collection &gt;20 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/021.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;22 &gt;&gt;
+&lt;&lt;if $collection &gt;21 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/022.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;23 &gt;&gt;
+&lt;&lt;if $collection &gt;22 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/023.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;24 &gt;&gt;
+&lt;&lt;if $collection &gt;23 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/024.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;25 &gt;&gt;
+&lt;&lt;if $collection &gt;24 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/025.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;26 &gt;&gt;
+&lt;&lt;if $collection &gt;25 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/026.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;27 &gt;&gt;
+&lt;&lt;if $collection &gt;26 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/027.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;28 &gt;&gt;
+&lt;&lt;if $collection &gt;27 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/028.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;29 &gt;&gt;
+&lt;&lt;if $collection &gt;28 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/029.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;30 &gt;&gt;
+&lt;&lt;if $collection &gt;29 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/030.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;31 &gt;&gt;
+&lt;&lt;if $collection &gt;30 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/031.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;32 &gt;&gt;
+&lt;&lt;if $collection &gt;31 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/032.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;33 &gt;&gt;
+&lt;&lt;if $collection &gt;32 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/033.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;34 &gt;&gt;
+&lt;&lt;if $collection &gt;33 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/034.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;35 &gt;&gt;
+&lt;&lt;if $collection &gt;34 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/035.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;36 &gt;&gt;
+&lt;&lt;if $collection &gt;35 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/036.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;37 &gt;&gt;
+&lt;&lt;if $collection &gt;36 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/037.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;38 &gt;&gt;
+&lt;&lt;if $collection &gt;37 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/038.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;39 &gt;&gt;
+&lt;&lt;if $collection &gt;38 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/039.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;40 &gt;&gt;
+&lt;&lt;if $collection &gt;39 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/040.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;41 &gt;&gt;
+&lt;&lt;if $collection &gt;40 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/041.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
@@ -370,117 +367,121 @@ Ik wil verder [[spelen|Som]].</tw-passagedata><tw-passagedata pid="9" name="verz
 &lt;&lt;if $collection &gt;4 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/005.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;6 &gt;&gt;
+&lt;&lt;if $collection &gt;5 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/006.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;7 &gt;&gt;
+&lt;&lt;if $collection &gt;6 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/007.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;8 &gt;&gt;
+&lt;&lt;if $collection &gt;7 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/008.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;9 &gt;&gt;
+&lt;&lt;if $collection &gt;8 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/009.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;10 &gt;&gt;
+&lt;&lt;if $collection &gt;9 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/010.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;11 &gt;&gt;
+&lt;&lt;if $collection &gt;10 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/011.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;12 &gt;&gt;
+&lt;&lt;if $collection &gt;11 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/012.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;13 &gt;&gt;
+&lt;&lt;if $collection &gt;12 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/013.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;14&gt;&gt;
+&lt;&lt;if $collection &gt;13 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/014.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;15 &gt;&gt;
+&lt;&lt;if $collection &gt;14 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/015.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;16 &gt;&gt;
+&lt;&lt;if $collection &gt;15 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/016.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;17 &gt;&gt;
+&lt;&lt;if $collection &gt;16 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/017.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;18 &gt;&gt;
+&lt;&lt;if $collection &gt;17 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/018.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;19 &gt;&gt;
+&lt;&lt;if $collection &gt;18 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/019.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;20 &gt;&gt;
+&lt;&lt;if $collection &gt;19 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/020.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;21 &gt;&gt;
+&lt;&lt;if $collection &gt;20 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/021.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;22 &gt;&gt;
+&lt;&lt;if $collection &gt;21 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/022.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;23 &gt;&gt;
+&lt;&lt;if $collection &gt;22 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/023.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;24 &gt;&gt;
+&lt;&lt;if $collection &gt;23 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/024.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;25 &gt;&gt;
+&lt;&lt;if $collection &gt;24 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/025.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;26 &gt;&gt;
+&lt;&lt;if $collection &gt;25 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/026.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;27 &gt;&gt;
+&lt;&lt;if $collection &gt;26 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/027.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;28 &gt;&gt;
+&lt;&lt;if $collection &gt;27 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/028.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;29 &gt;&gt;
+&lt;&lt;if $collection &gt;28 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/029.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;30 &gt;&gt;
+&lt;&lt;if $collection &gt;29 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/030.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;31 &gt;&gt;
+&lt;&lt;if $collection &gt;30 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/031.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;32 &gt;&gt;
+&lt;&lt;if $collection &gt;31 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/032.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;33 &gt;&gt;
+&lt;&lt;if $collection &gt;32 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/033.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;34 &gt;&gt;
+&lt;&lt;if $collection &gt;33 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/034.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;35 &gt;&gt;
+&lt;&lt;if $collection &gt;34 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/035.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;36 &gt;&gt;
+&lt;&lt;if $collection &gt;35 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/036.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;37 &gt;&gt;
+&lt;&lt;if $collection &gt;36 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/037.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;38 &gt;&gt;
+&lt;&lt;if $collection &gt;37 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/038.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;39 &gt;&gt;
+&lt;&lt;if $collection &gt;38 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/039.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;40 &gt;&gt;
+&lt;&lt;if $collection &gt;39 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/040.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $collection &gt;41 &gt;&gt;
+&lt;&lt;if $collection &gt;40 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/041.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 Ik wil verder [[spelen|Som]].
-</tw-passagedata></tw-storydata></div>
+</tw-passagedata><tw-passagedata pid="10" name="Naamloze passage 2" tags="" position="489.5,598.3181762695312">&lt;&lt;set $score = 3&gt;&gt;
+&lt;&lt;set $scoreChecker = $score / 20&gt;&gt;
+
+
+[[Naamloze passage 1]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS
 
