@@ -122,7 +122,12 @@ a:hover {
 #words {
   font-size: 10vw;
   color: orange;
-  }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="InitSom" tags="" position="313.5,418">Kun jij rekenen?
+  }
+
+#video{
+width: 100%;
+height: auto
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="InitSom" tags="" position="313.5,418">Kun jij rekenen?
 
 Met dit spel, leer je dat.
 
@@ -209,10 +214,12 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
 &lt;div id=&quot;intro&quot;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;HET&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;\ 
  &lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;GROTE&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;POKEMON&quot;&gt;&gt;
- &lt;img src=&quot;http://www.freeiconspng.com/uploads/pikachu-transparent-hd-1.png&quot; width=&quot;230&quot; height=&quot;300&quot;&gt;&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
+ &lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;SPEL&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\ 
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;[[Begin]]&lt;&lt;/replace&gt;&gt;\
- &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="rekenenMin" tags="" position="823.5,348">&lt;&lt;nobr&gt;&gt;
+ &lt;&lt;/timed&gt;&gt;
+ 
+&lt;img src=&quot;http://www.freeiconspng.com/uploads/pikachu-transparent-hd-1.png&quot; width=&quot;230&quot; height=&quot;300&quot;&gt;</tw-passagedata><tw-passagedata pid="5" name="rekenenMin" tags="" position="823.5,348">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $score === 0&gt;&gt;
 Hier komt je eerste som!
 &lt;&lt;elseif $score === 1&gt;&gt;
@@ -244,14 +251,19 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;  
 
-[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="615.5,200">  &lt;div id=&quot;video&quot;&gt; &lt;iframe src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; &lt;/div&gt;
+[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="615.5,200">  
+  
+  
+  
+  
+  
+  &lt;iframe width=&quot;768&quot; height=&quot;432&quot; src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; 
 
 [[START|Init]]
 
- 
- 
 
  
+
  
 
  
@@ -831,7 +843,7 @@ Ik zag:
 &lt;&lt;/if&gt;&gt;
 
 Dit is [[goed]].
-Oeps, dat was fout. Ik wil [[opnieuw|wordChecker]].
+Oeps, dat was fout. Ik wil [[nog een keer|wordChecker]].
 
 
 
@@ -890,10 +902,11 @@ Dat was niet goed. Probeer het nog eens|rekenen.
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Begin" tags="" position="619.5,549">&lt;&lt;if $collection === 0&gt;&gt;
 [[Leren|InitSom]] hoe het werkt.
-&lt;&lt;/if&gt;&gt;
-[[woorden onthouden|klaar]]
-[[rekenenPlus]]
-[[rekenenMin]]</tw-passagedata><tw-passagedata pid="27" name="klaar" tags="" position="623.5,754">Als je op &#x27;klaar&#x27; klikt, verschijnen 4 woorden.
+&lt;&lt;else&gt;&gt;
+[[Woorden onthouden|klaar]]
+[[Rekenen met plus|rekenenPlus]]
+[[Rekenen met min|rekenenMin]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="klaar" tags="" position="623.5,754">Als je op &#x27;klaar&#x27; klikt, zie 4 woorden.
 
 Onthoud ze goed.
 
