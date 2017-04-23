@@ -282,7 +282,7 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  
 
  
- </tw-passagedata><tw-passagedata pid="7" name="Naamloze passage 1" tags="" position="472.5,973.7272644042969">
+ </tw-passagedata><tw-passagedata pid="7" name="Naamloze passage 1" tags="" position="392.5,1010.7272644042969">
 
 Teaser zetten bij elke pokemon over de volgende pokemon.
 Geluidseffecten toevoegen als wordt geclicket op de pokemon.
@@ -1017,13 +1017,15 @@ Nog een som|rekenen2!
 	&lt;&lt;else&gt;&gt;
 Dat was niet goed. Probeer het nog eens|rekenen.
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Begin" tags="" position="619.5,549">&lt;&lt;if $collection === 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Begin" tags="" position="619.5,550">&lt;&lt;if $collection === 0&gt;&gt;
 [[Leren|InitSom]] hoe het werkt.
 &lt;&lt;else&gt;&gt;
 [[Woorden onthouden|klaar]]
 [[Rekenen met plus|rekenenPlus]]
 [[Rekenen met min|rekenenMin]]
 [[Zelf rekenen|Sommen]]
+[[Reeks afmaken|Reeks]]
+[[Getallenvierkant|Square]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="klaar" tags="" position="623.5,754">Als je op &#x27;klaar&#x27; klikt, zie 4 woorden.
 
 Onthoud ze goed.
@@ -1110,6 +1112,234 @@ Jij zei: $number2 - $number1 = &lt;u&gt;$answer&lt;/u&gt;
 &lt;&lt;/if&gt;&gt;
 Doe het [[nog eens|Sommen]]
 &lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="27" name="Reeks" tags="" position="1219.5,813.5">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $randomizer = random (1, 5)&gt;&gt;
+&lt;&lt;set $number1 = random (1, 5)&gt;&gt;
+&lt;&lt;set $number2 = $number1 * 2&gt;&gt;
+&lt;&lt;set $number3 = $number1 * 3&gt;&gt;
+&lt;&lt;set $number4 = $number1 * 4&gt;&gt;
+&lt;&lt;set $number5 = $number1 * 5&gt;&gt;
+&lt;&lt;set $correctAnswer = $number2 - $number1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+Vul in:
+
+&lt;&lt;if $randomizer === 1&gt;&gt; &lt;&lt;set $correctAnswer = $randomizer * $number1&gt;&gt;
+&lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
+$number2
+$number3
+$number4
+$number5
+&lt;&lt;elseif $randomizer === 2&gt;&gt;&lt;&lt;set $correctAnswer = $randomizer * $number1&gt;&gt;
+$number1
+&lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
+$number3
+$number4
+$number5
+&lt;&lt;elseif $randomizer === 3&gt;&gt;&lt;&lt;set $correctAnswer = $randomizer * $number1&gt;&gt;
+$number1
+$number2
+&lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
+$number4
+$number5
+&lt;&lt;elseif $randomizer === 4&gt;&gt;&lt;&lt;set $correctAnswer = $randomizer * $number1&gt;&gt;
+$number1
+$number2
+$number3
+&lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
+$number5
+&lt;&lt;else&gt;&gt;&lt;&lt;set $correctAnswer = $randomizer * $number1&gt;&gt;
+$number1
+$number2
+$number3
+$number4
+&lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="checkSeries" tags="" position="1223.5,915.5">&lt;&lt;if $answer == $correctAnswer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+	&lt;&lt;if $score % 4 === 0&gt;&gt;&lt;&lt;set $collection = $collection + 1&gt;&gt;
+	Goed zo!
+	
+	Je hebt er een [[pokemon|verzameling]] bij!
+	&lt;&lt;else&gt;&gt;
+	Nog een [[keer|Reeks]]!
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Dat is niet goed.
+[[Reeks]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Square" tags="" position="1291.5,447">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;
+
+&lt;&lt;set $numbersRow1 = []&gt;&gt;
+&lt;&lt;set $numbersRow2 = []&gt;&gt;
+&lt;&lt;set $numbersRow3 = []&gt;&gt;
+&lt;&lt;set $randomizer = random (1, 9)&gt;&gt;
+
+&lt;&lt;if $randomizer === 1&gt;&gt;
+&lt;&lt;set $numbersRow1[0] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow1[0] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 2&gt;&gt;
+&lt;&lt;set $numbersRow1[1] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow1[1] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 3&gt;&gt;
+&lt;&lt;set $numbersRow1[2] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow1[2] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 4&gt;&gt;
+&lt;&lt;set $numbersRow2[0] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow2[0] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 5&gt;&gt;
+&lt;&lt;set $numbersRow2[1] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow2[1] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 6&gt;&gt;
+&lt;&lt;set $numbersRow2[2] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow2[2] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 7&gt;&gt;
+&lt;&lt;set $numbersRow3[0] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow3[0] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 8&gt;&gt;
+&lt;&lt;set $numbersRow3[1] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow3[1] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 9&gt;&gt;
+&lt;&lt;set $numbersRow3[2] = &quot;X&quot;&gt;&gt;&lt;&lt;set $numberX = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow3[2] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;/nobr&gt;&gt;
+$numbersRow1
+$numbersRow2
+$numbersRow3
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;
+
+&lt;&lt;set $numbersRow1 = []&gt;&gt;
+&lt;&lt;set $numbersRow2 = []&gt;&gt;
+&lt;&lt;set $numbersRow3 = []&gt;&gt;
+&lt;&lt;set $randomizer = random (1, 9)&gt;&gt;
+
+&lt;&lt;if $randomizer === 1&gt;&gt;
+&lt;&lt;set $numbersRow1[0] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow1[0] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 2&gt;&gt;
+&lt;&lt;set $numbersRow1[1] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow1[1] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 3&gt;&gt;
+&lt;&lt;set $numbersRow1[2] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow1[2] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 4&gt;&gt;
+&lt;&lt;set $numbersRow2[0] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow2[0] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 5&gt;&gt;
+&lt;&lt;set $numbersRow2[1] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow2[1] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 6&gt;&gt;
+&lt;&lt;set $numbersRow2[2] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow2[2] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 7&gt;&gt;
+&lt;&lt;set $numbersRow3[0] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow3[0] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 8&gt;&gt;
+&lt;&lt;set $numbersRow3[1] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow3[1] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $randomizer === 9&gt;&gt;
+&lt;&lt;set $numbersRow3[2] = &quot;Y&quot;&gt;&gt;&lt;&lt;set $numberY = $numbers.pluck()&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $numbersRow3[2] = $numbers.pluck()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+$numbersRow1
+$numbersRow2
+$numbersRow3
+
+X = &lt;&lt;textbox &quot;$answerX&quot; &quot;&quot;&gt;&gt;
+
+Y = &lt;&lt;textbox &quot;$answerY&quot; &quot;&quot;&gt;&gt;
+
+[[Klaar|checkSquare]]</tw-passagedata><tw-passagedata pid="30" name="checkSquare" tags="" position="1286.5,585">&lt;&lt;if $numberX == $answerX and $numberY == $answerY&gt;&gt;
+Dat klopt. 
+
+X = $numberX
+Y = $numberY
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $numberX &gt; $numberY&gt;&gt;
+&lt;&lt;set $correctAnswer = $numberX - $numberY&gt;&gt;
+X - Y = &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSquare1&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt; &lt;&lt;set $correctAnswer = $numberX + $numberY&gt;&gt;
+X + Y = &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSquare1&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Dat is niet goed.
+
+Doe het [[nog eens|Square]].
+&lt;&lt;/if&gt;&gt;
+
+
+
+$numberX
+$numberY
+
+$answerX
+$answerY</tw-passagedata><tw-passagedata pid="31" name="checkSquare1" tags="" position="1288.5,687">&lt;&lt;if $correctAnswer == $answer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+	&lt;&lt;if $score % 4 === 0&gt;&gt;&lt;&lt;set $collection = $collection + 1&gt;&gt;
+	Goed zo!
+	
+	Je hebt er een [[pokemon|verzameling]] bij!
+	&lt;&lt;else&gt;&gt;
+	Nog een [[keer|Square]]!
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Dat is niet [[goed|Square]].
+&lt;&lt;/if&gt;&gt;
+
 
 </tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
