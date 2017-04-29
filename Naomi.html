@@ -247,7 +247,7 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Start2" tags="" position="613.5,359">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $score = 0&gt;&gt;
-&lt;&lt;set $collection = 150&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;set $collection = 0&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;div id=&quot;intro&quot;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;HET&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;\ 
  &lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;GROTE&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;POKEMON&quot;&gt;&gt;
@@ -301,7 +301,8 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  
 
  
- </tw-passagedata><tw-passagedata pid="7" name="Naamloze passage 1" tags="" position="392.5,1010.7272644042969">Winkel waar ze spullen moet kopen met een budget in vier ronden. Als ze alles meteen uitgeeft, moet er een kans zijn, dat ze niet genoeg geld heeft. Prijzen moeten dus per ronde variëren.
+ </tw-passagedata><tw-passagedata pid="7" name="Naamloze passage 1" tags="" position="243.5,145.72726440429688">
+Er is ook nog geen AI bij het bieden. Er moeten redenen komen, waarom TR wel of niet biedt. Misschien (random) aan het begin van een biedingsronde beschrijven hoe graag TR deze pokemon wil hebben.
 
 Moeilijkheidsgraad opvoeren naarmate &#x27;collection&#x27; hoger wordt door in &#x27;verzameling&#x27; niet alleen collection, maar ook een andere teller te laten oplopen (bv. 1x per 30 collection) en dat getal te vermenigvuldigen met een random waarden (bv. tussen 1 en 9).
 
@@ -2789,20 +2790,16 @@ Ik bied [[niets]] voor deze pokemon.
 
 Jij hebt nog $cash over.
 
-Doe het [[nog eens|Start het bieden!]].</tw-passagedata><tw-passagedata pid="46" name="Naamloze passage 4" tags="" position="1359.25,140">Er wordt nog geen rekening gehouden met het budget van de speler. Nu kan er nog oneindig worden geboden.
-
-Er moet een variabele worden aangemaakt om onderscheid te maken tussen het telkens hogere bod en de hoogte van het bod. Nu wordt &#x27;offer&#x27; bij elk bod hoger, omdat het een cummulatieve variabele is. De nieuwe &#x27;offers&#x27; moeten niet worden opgeteld, maar elkaar vervangen. In die nieuwe variabele moet het totaal worden bijgehouden. Dat moet worden vergeleken met $cash.
-
-Er is ook nog geen AI. Er moeten redenen komen, waarom TR wel of niet biedt. Misschien (random) aan het begin van een biedingsronde beschrijven hoe graag TR deze pokemon wil hebben.</tw-passagedata><tw-passagedata pid="47" name="Test" tags="" position="1662.75,131">
+Doe het [[nog eens|Start het bieden!]].</tw-passagedata><tw-passagedata pid="46" name="Test" tags="" position="1662.75,131">
 De eerste pokemon is $pokemon1.
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
-Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;Test1&quot;&gt;&gt;.</tw-passagedata><tw-passagedata pid="48" name="Naamloze passage 6" tags="" position="1658.75,21">&lt;&lt;set $offer = 0&gt;&gt;
+Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;Test1&quot;&gt;&gt;.</tw-passagedata><tw-passagedata pid="47" name="Naamloze passage 6" tags="" position="1658.75,21">&lt;&lt;set $offer = 0&gt;&gt;
 &lt;&lt;set $offerTotal = 0&gt;&gt;
 &lt;&lt;set $tr = 0&gt;&gt;
 &lt;&lt;set $round = 0&gt;&gt;
 
-[[Test]]</tw-passagedata><tw-passagedata pid="49" name="Test1" tags="" position="1657.75,239">$offer
+[[Test]]</tw-passagedata><tw-passagedata pid="48" name="Test1" tags="" position="1657.75,239">$offer
 $offerTotal
 
 [[Test]]</tw-passagedata></tw-storydata></div>
