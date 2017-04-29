@@ -245,11 +245,9 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
 
 		Probeer het [[nog eens|rekenenPlus]]
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Start2" tags="" position="614.5,358">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Start2" tags="" position="613.5,359">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $score = 0&gt;&gt;
-&lt;&lt;set $collection = 150&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-
+&lt;&lt;set $collection = 150&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;div id=&quot;intro&quot;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;HET&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;\ 
  &lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;GROTE&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;POKEMON&quot;&gt;&gt;
@@ -290,10 +288,8 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;  
 
-[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="616.5,200">  
+[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="616.5,200">
     
-  
-  
   
   &lt;iframe width=&quot;768&quot; height=&quot;432&quot; src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; 
 
@@ -2504,12 +2500,14 @@ Je hebt &lt;&lt;print $cash = random (20, 25)&gt;&gt; euro.
 
 &lt;&lt;nobr&gt;&gt;&lt;&lt;set $pokemon = [ &quot;Bulbasaur&quot;, &quot;Squirtle&quot;, &quot;Butterfree&quot;, &quot;Pidgey&quot;, &quot;Spearow&quot;, &quot;Ekans&quot;, &quot;Pikachu&quot;, &quot;Meowth&quot;, &quot;Psyduck&quot;, &quot;Ponyta&quot;, &quot;Eevee&quot;, &quot;Vaporeon&quot;, &quot;Snorlax&quot;, &quot;Sandshrew&quot;, &quot;Clefairy&quot;, &quot;Vulpix&quot;, &quot;Jigglypuff&quot;, &quot;Oddish&quot;, &quot;Diglett&quot;, &quot;Poliwag&quot; ]&gt;&gt;
 &lt;&lt;set $round = 0&gt;&gt;
+&lt;&lt;set $offer = 0&gt;&gt;
 &lt;&lt;set $pokemonsWon = 0&gt;&gt;
 &lt;&lt;set $pokemon1 = $pokemon.pluck()&gt;&gt;
 &lt;&lt;set $pokemon2 = $pokemon.pluck()&gt;&gt;
 &lt;&lt;set $pokemon3 = $pokemon.pluck()&gt;&gt;
-&lt;&lt;set $pokemon4 = $pokemon.pluck()&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Start het bieden!" tags="" position="1106.25,233">&lt;&lt;if $round === 0&gt;&gt;De eerste pokemon is $pokemon1.
+&lt;&lt;set $pokemon4 = $pokemon.pluck()&gt;&gt;
+&lt;&lt;set $pokemon5 = $pokemon.pluck()&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="43" name="Start het bieden!" tags="" position="1105.25,233">&lt;&lt;if $round === 0&gt;&gt;De eerste pokemon is $pokemon1.&lt;&lt;set $round = 1&gt;&gt;
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
 Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
@@ -2523,41 +2521,41 @@ Ik bied [[niets]] voor deze pokemon.
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/012.jpeg&quot;&gt;
 &lt;&lt;elseif $pokemon1 === &quot;Pidgey&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/016.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Spearow&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Spearow&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/021.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Ekans&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Ekans&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/023.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Pikachu&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Pikachu&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/025.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Sandshrew&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Sandshrew&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/027.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Clefairy&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Clefairy&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/035.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Vulpix&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Vulpix&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/037.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Jigglypuff&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Jigglypuff&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/039.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Oddish&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Oddish&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/043.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Diglett&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Diglett&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/050.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Meowth&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Meowth&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/52.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Psyduck&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Psyduck&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/054.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Poliwag&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Poliwag&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/060.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Ponyta&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Ponyta&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/077.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Eevee&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Eevee&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/133.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Vaporeon&quot;&gt;&gt;
+&lt;&lt;elseif $pokemon1 === &quot;Vaporeon&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/134.jpeg&quot;&gt;
-&lt;&lt;elseif $pokemon === &quot;Snorlax&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/143.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;elseif $round === 1&gt;&gt;De volgende pokemon is $pokemon2.
+&lt;&lt;elseif $round === 1&gt;&gt;De volgende pokemon is $pokemon2.&lt;&lt;set $round = 2&gt;&gt;
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
 Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
@@ -2605,7 +2603,7 @@ Ik bied [[niets]] voor deze pokemon.
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/143.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;elseif $round === 3&gt;&gt;De volgende pokemon is $pokemon3.
+&lt;&lt;elseif $round === 2&gt;&gt;De volgende pokemon is $pokemon3.&lt;&lt;set $round = 3&gt;&gt;
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
 Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
@@ -2653,14 +2651,14 @@ Ik bied [[niets]] voor deze pokemon.
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/143.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;else&gt;&gt;De volgende pokemon is $pokemon4.&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $round === 3&gt;&gt;De volgende pokemon is $pokemon4.&lt;&lt;set $round = 4&gt;&gt;
 
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
 Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
 Ik bied [[niets]] voor deze pokemon.
 
-&lt;&lt;if $pokemon1 === &quot;Bulbasaur&quot;&gt;&gt;
+&lt;&lt;if $pokemon4 === &quot;Bulbasaur&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/001.jpeg&quot;&gt;
 &lt;&lt;elseif $pokemon4 === &quot;Squirtle&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/007.jpeg&quot;&gt;
@@ -2700,12 +2698,73 @@ Ik bied [[niets]] voor deze pokemon.
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/134.jpeg&quot;&gt;
 &lt;&lt;elseif $pokemon4 === &quot;Snorlax&quot;&gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/143.jpeg&quot;&gt;
+&lt;&lt;/if&gt;&gt; 
+
+&lt;&lt;elseif $round === 4&gt;&gt;De volgende pokemon is $pokemon5.&lt;&lt;set $round = 5&gt;&gt;
+
+Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
+
+Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
+Ik bied [[niets]] voor deze pokemon.
+
+&lt;&lt;if $pokemon5 === &quot;Bulbasaur&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/001.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Squirtle&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/007.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Butterfree&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/012.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Pidgey&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/016.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Spearow&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/021.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Ekans&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/023.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Pikachu&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/025.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon4 === &quot;Sandshrew&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/027.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Clefairy&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/035.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Vulpix&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/037.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Jigglypuff&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/039.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Oddish&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/043.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Diglett&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/050.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Meowth&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/52.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Psyduck&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/054.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Poliwag&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/060.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Ponyta&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/077.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Eevee&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/133.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Vaporeon&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/134.jpeg&quot;&gt;
+&lt;&lt;elseif $pokemon5 === &quot;Snorlax&quot;&gt;&gt;
+&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/143.jpeg&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;else&gt;&gt;
+Je hebt $pokemonsWon pokemons gered!
 
-</tw-passagedata><tw-passagedata pid="44" name="offer" tags="" position="1235,233">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $round = $round + 1&gt;&gt;
+Je hebt nu $pokemonsWon [[pokemons|verzameling]] erbij. 
+&lt;&lt;set $collection = $collection + $pokemonsWon&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="offer" tags="" position="1235,233">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $offer to parseInt($offer, 10)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;if $cash === 0&gt;&gt;
+Je hebt geen geld meer.
+&lt;&lt;set $rounds = 6&gt;&gt;
+Je kan [[niet meer bieden|Start het bieden!]].
+&lt;&lt;elseif $cash &lt; 0&gt;&gt;
+Je bood meer dan je had.
+
+Dat telt niet. Je [[geld is op|Start het bieden!]].
+&lt;&lt;else&gt;&gt;
 &lt;&lt;if $offer &lt;= $tr&gt;&gt;
 Dat kan niet. Team Rocket bood $tr.
 
@@ -2723,7 +2782,9 @@ Ik bied [[niets]] voor deze pokemon.
 		Team Rocket biedt nu &lt;&lt;print $tr = $offer + random (1, 2)&gt;&gt;.
 		
 		Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
+		Ik bied [[niet meer|niets]] op deze pokemon.
 	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="niets" tags="" position="1239,108">Team Rocket heeft nu de pokemon.
 
 Jij hebt nog $cash over.
@@ -2732,7 +2793,19 @@ Doe het [[nog eens|Start het bieden!]].</tw-passagedata><tw-passagedata pid="46"
 
 Er moet een variabele worden aangemaakt om onderscheid te maken tussen het telkens hogere bod en de hoogte van het bod. Nu wordt &#x27;offer&#x27; bij elk bod hoger, omdat het een cummulatieve variabele is. De nieuwe &#x27;offers&#x27; moeten niet worden opgeteld, maar elkaar vervangen. In die nieuwe variabele moet het totaal worden bijgehouden. Dat moet worden vergeleken met $cash.
 
-Er is ook nog geen AI. Er moeten redenen komen, waarom TR wel of niet biedt. Misschien (random) aan het begin van een biedingsronde beschrijven hoe graag TR deze pokemon wil hebben.</tw-passagedata></tw-storydata></div>
+Er is ook nog geen AI. Er moeten redenen komen, waarom TR wel of niet biedt. Misschien (random) aan het begin van een biedingsronde beschrijven hoe graag TR deze pokemon wil hebben.</tw-passagedata><tw-passagedata pid="47" name="Test" tags="" position="1662.75,131">
+De eerste pokemon is $pokemon1.
+Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
+
+Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;Test1&quot;&gt;&gt;.</tw-passagedata><tw-passagedata pid="48" name="Naamloze passage 6" tags="" position="1658.75,21">&lt;&lt;set $offer = 0&gt;&gt;
+&lt;&lt;set $offerTotal = 0&gt;&gt;
+&lt;&lt;set $tr = 0&gt;&gt;
+&lt;&lt;set $round = 0&gt;&gt;
+
+[[Test]]</tw-passagedata><tw-passagedata pid="49" name="Test1" tags="" position="1657.75,239">$offer
+$offerTotal
+
+[[Test]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS
 
