@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Naomi" startnode="38" creator="Twine" creator-version="2.1.2" ifid="ED946D69-92D6-48FA-9FBE-999EEF2AF453" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+	<div id="store-area" hidden><tw-storydata name="Naomi" startnode="37" creator="Twine" creator-version="2.1.2" ifid="ED946D69-92D6-48FA-9FBE-999EEF2AF453" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
   background: #FAEBD7;
   color: #3CB371;
   font-family: "Comic Sans MS", "Marker Felt", sans-serif;
@@ -183,13 +183,16 @@ input[type="text"] {
   font-size: 8vw;
   margin-left: 1em;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="InitSom" tags="" position="313.5,418">Vertel me eerst je naam.
+
+#einde {
+ color: firebrick; 
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="InitSom" tags="" position="313.5,418">Vertel me eerst je naam.
 
 Mijn naam is: &lt;&lt;textbox &quot;$player&quot; &quot;Naomi&quot;&gt;&gt;
 
 Ben je klaar? 
 
-Druk dan op de blauwe [[knop]].
+Druk dan op de blauwe [[woord]].
 
 &lt;&lt;set $score = 0&gt;&gt;
 &lt;&lt;set $collection = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="rekenenPlus" tags="" position="1737.5,818">&lt;&lt;nobr&gt;&gt;
@@ -274,12 +277,7 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;  
 
-[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="5" name="Naamloze passage 1" tags="" position="234.5,151.72726440429688">Lay out en kleuren (achtergrond).
- 
-
-
-
-</tw-passagedata><tw-passagedata pid="6" name="verzameling" tags="" position="794.5,658">&lt;h1&gt;Pokemons van $player&lt;/h1&gt;
+[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="5" name="verzameling" tags="" position="794.5,658">&lt;h1&gt;Pokemons van $player&lt;/h1&gt;
 
 Ik wil een [[ander spel|Begin]] doen.
 &lt;&lt;if $difficulty === 1&gt;&gt; Dit is het moeilijke spel. Daarom krijg je hier [[extra pokemons|verzamelingMoeilijk]]. &lt;&lt;/if&gt;&gt;
@@ -741,7 +739,7 @@ Klik op de pokemon voor geluid!
 &lt;&lt;link &#x27;&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/151.jpeg&quot;&gt;&#x27;&gt;&gt;&lt;&lt;audio mew volume 0.5 play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="7" name="lvl1" tags="" position="304.5,668">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="6" name="lvl1" tags="" position="304.5,668">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $number1 = random (0, 5)&gt;&gt;
 &lt;&lt;set $number2 = random (1, 5)&gt;&gt;
 &lt;&lt;set $correctAnswer = $number1 + $number2&gt;&gt;
@@ -752,14 +750,14 @@ Dat is: &lt;&lt;set $answer to 0&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;&
 &lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-1]&quot;&gt;&gt;&lt;&lt;set $answer--&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Klaar|Check]]</tw-passagedata><tw-passagedata pid="8" name="knop" tags="" position="316.5,543">Hallo, $player.
+[[Klaar|Check]]</tw-passagedata><tw-passagedata pid="7" name="woord" tags="" position="316.5,543">Hallo, $player.
 
 Ken jij pokemon?
 
 Haal veel punten, dan krijg je pokemons.
 
 Ik wil eerst [[oefenen]].
-Ik ben [[klaar|lvl1]].</tw-passagedata><tw-passagedata pid="9" name="Check" tags="" position="304.5,807">&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
+Ik ben [[klaar|lvl1]].</tw-passagedata><tw-passagedata pid="8" name="Check" tags="" position="304.5,807">&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 	&lt;&lt;set $collection = $collection + 1&gt;&gt;
 Goed gedaan, $player.
 
@@ -773,7 +771,7 @@ Nog een [[som|rekenenPlus]]!
 Dat was niet goed.
 
 Probeer het [[nog eens|lvl1]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="oefenen" tags="" position="188.5,544">Druk op +1.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="oefenen" tags="" position="188.5,544">Druk op +1.
 
 Ga door tot 6.
 
@@ -781,7 +779,7 @@ Ga door tot 6.
 &lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt; &lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 Dit is fout. Ik wil [[opnieuw|oefenen]].
-Ik ben [[klaar|klaarOptellen]].</tw-passagedata><tw-passagedata pid="11" name="klaarOptellen" tags="" position="50.5,546">&lt;&lt;if $answer === 6 or $answer &lt; 0&gt;&gt;
+Ik ben [[klaar|klaarOptellen]].</tw-passagedata><tw-passagedata pid="10" name="klaarOptellen" tags="" position="50.5,546">&lt;&lt;if $answer === 6 or $answer &lt; 0&gt;&gt;
 Druk nu op -1.
 
 Ga door tot 0.
@@ -795,7 +793,7 @@ Ik ben [[klaar|klaarAftrekken]].
 Dat was nog niet goed.
 
 Probeer het [[nog eens|oefenen]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="klaarAftrekken" tags="" position="47.5,679">&lt;&lt;if $answer === 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="klaarAftrekken" tags="" position="47.5,679">&lt;&lt;if $answer === 0&gt;&gt;
 Goed zo, $player!
 &lt;&lt;set $collection = $collection +1 &gt;&gt;
 Je hebt nu een [[pokemon]].
@@ -803,7 +801,7 @@ Je hebt nu een [[pokemon]].
 Dat was nog niet goed.
 &lt;&lt;set $answer = 6&gt;&gt;
 Probeer het [[nog eens|klaarOptellen]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="pokemon" tags="" position="70.5,809">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="pokemon" tags="" position="70.5,809">&lt;&lt;nobr&gt;&gt;
 Ik wil verder [[spelen|lvl1]].
 &lt;&lt;/nobr&gt;&gt;
 
@@ -812,7 +810,7 @@ Ik wil verder [[spelen|lvl1]].
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/001.jpeg&quot;&gt; &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $collection &gt;1 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/002.jpeg&quot;&gt; &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="woorden onthouden" tags="" position="618.5,884.8333435058594">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $words = [ &quot;aap&quot;, &quot;noot&quot;, &quot;vis&quot;, &quot;vuur&quot;, &quot;boom&quot;, &quot;zus&quot;, &quot;papa&quot;, &quot;mama&quot;, &quot;man&quot;, &quot;kind&quot;, &quot;hoog&quot;, &quot;laag&quot;, &quot;pet&quot;, &quot;kat&quot;, &quot;fles&quot;, &quot;lamp&quot;, &quot;bloem&quot;, &quot;stoel&quot;, &quot;vrouw&quot;, &quot;gras&quot;, &quot;mat&quot;, &quot;vloer&quot;, &quot;tafel&quot;, &quot;kom&quot;, &quot;hond&quot;, &quot;haar&quot;, &quot;net&quot;, &quot;pak&quot;, &quot;sok&quot;, &quot;broek&quot;, &quot;uil&quot;, &quot;doos&quot;, &quot;hard&quot;, &quot;zacht&quot;, &quot;melk&quot;, &quot;brood&quot;, &quot;koek&quot;, &quot;pot&quot;, &quot;zak&quot;, &quot;hek&quot;, &quot;nek&quot;, &quot;buik&quot;, &quot;voet&quot;, &quot;been&quot;, &quot;hand&quot;, &quot;mond&quot;, &quot;neus&quot;, &quot;arm&quot;, &quot;pols&quot;, &quot;knie&quot;, &quot;oor&quot;, &quot;oog&quot;, &quot;vork&quot;, &quot;lepel&quot;, &quot;mes&quot;, &quot;bord&quot;, &quot;jas&quot;, &quot;das&quot;, &quot;trui&quot;, &quot;bal&quot;, &quot;klein&quot;, &quot;groot&quot;, &quot;zeep&quot;, &quot;water&quot;, &quot;bos&quot;, &quot;bes&quot;, &quot;bus&quot;, &quot;bas&quot;, &quot;koe&quot;, &quot;schaap&quot;, &quot;lam&quot;, &quot;big&quot;, &quot;poes&quot;, &quot;geit&quot;, &quot;ijs&quot;, &quot;soep&quot;, &quot;stok&quot; ]&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="woorden onthouden" tags="" position="618.5,884.8333435058594">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $words = [ &quot;aap&quot;, &quot;noot&quot;, &quot;vis&quot;, &quot;vuur&quot;, &quot;boom&quot;, &quot;zus&quot;, &quot;papa&quot;, &quot;mama&quot;, &quot;man&quot;, &quot;kind&quot;, &quot;hoog&quot;, &quot;laag&quot;, &quot;pet&quot;, &quot;kat&quot;, &quot;fles&quot;, &quot;lamp&quot;, &quot;bloem&quot;, &quot;stoel&quot;, &quot;vrouw&quot;, &quot;gras&quot;, &quot;mat&quot;, &quot;vloer&quot;, &quot;tafel&quot;, &quot;kom&quot;, &quot;hond&quot;, &quot;haar&quot;, &quot;net&quot;, &quot;pak&quot;, &quot;sok&quot;, &quot;broek&quot;, &quot;uil&quot;, &quot;doos&quot;, &quot;hard&quot;, &quot;zacht&quot;, &quot;melk&quot;, &quot;brood&quot;, &quot;koek&quot;, &quot;pot&quot;, &quot;zak&quot;, &quot;hek&quot;, &quot;nek&quot;, &quot;buik&quot;, &quot;voet&quot;, &quot;been&quot;, &quot;hand&quot;, &quot;mond&quot;, &quot;neus&quot;, &quot;arm&quot;, &quot;pols&quot;, &quot;knie&quot;, &quot;oor&quot;, &quot;oog&quot;, &quot;vork&quot;, &quot;lepel&quot;, &quot;mes&quot;, &quot;bord&quot;, &quot;jas&quot;, &quot;das&quot;, &quot;trui&quot;, &quot;bal&quot;, &quot;klein&quot;, &quot;groot&quot;, &quot;zeep&quot;, &quot;water&quot;, &quot;bos&quot;, &quot;bes&quot;, &quot;bus&quot;, &quot;bas&quot;, &quot;koe&quot;, &quot;schaap&quot;, &quot;lam&quot;, &quot;big&quot;, &quot;poes&quot;, &quot;geit&quot;, &quot;ijs&quot;, &quot;soep&quot;, &quot;stok&quot; ]&gt;&gt;
 
 &lt;&lt;set $word = $words.pluck()&gt;&gt;
 &lt;&lt;set $word1 = $words.pluck()&gt;&gt;
@@ -831,7 +829,7 @@ Ik wil verder [[spelen|lvl1]].
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#words&quot;&gt;&gt;[[Klaar|wordChecker]].&lt;&lt;/replace&gt;&gt;\
   &lt;&lt;/timed&gt;&gt;
  
-</tw-passagedata><tw-passagedata pid="15" name="wordChecker" tags="" position="736.5,1027.8333435058594">Dit is [[goed]].
+</tw-passagedata><tw-passagedata pid="14" name="wordChecker" tags="" position="736.5,1027.8333435058594">Dit is [[goed]].
 Oeps, dat is [[fout|wordChecker]].&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $answerRandomizer = random (1, 5)&gt;&gt;
 &lt;&lt;set $correctAnswer = 0&gt;&gt;
@@ -946,7 +944,7 @@ Oeps, dat is [[fout|wordChecker]].&lt;&lt;nobr&gt;&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="16" name="goed" tags="" position="820.5,885.8333435058594">&lt;&lt;if $correctAnswer === 1 and $correctAnswer1 === 1 and $correctAnswer2 === 1 and $correctAnswer3 === 1 and $correctAnswer4 === 0 and $correctAnswer5 === 0 and $correctAnswer6 === 0 and $correctAnswer7 === 0&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="15" name="goed" tags="" position="820.5,885.8333435058594">&lt;&lt;if $correctAnswer === 1 and $correctAnswer1 === 1 and $correctAnswer2 === 1 and $correctAnswer3 === 1 and $correctAnswer4 === 0 and $correctAnswer5 === 0 and $correctAnswer6 === 0 and $correctAnswer7 === 0&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
 Goed zo! 
 
 Ga zo door.
@@ -962,8 +960,70 @@ $word1
 $word2
 $word3
 Probeer het [[nog eens|woorden onthouden]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Begin" tags="" position="620.5,549">&lt;&lt;if $collection === 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Begin" tags="" position="620.5,549">&lt;&lt;if $collection === 0&gt;&gt;
 [[Leren|InitSom]] hoe het werkt.
+&lt;&lt;elseif $collection &gt; 150&gt;&gt;&lt;div id=&quot;einde&quot;&gt;
+Je hebt nu alle pokemons in het spel. Je kunt verder spelen, maar je krijgt dan geen pokemons meer.&lt;/div&gt;
+Welk spel wil je doen?
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $games = [ 1, 2, 3, 4, 5, 6, 7 ]&gt;&gt;
+
+&lt;&lt;set $game1 = $games.pluck()&gt;&gt;
+&lt;&lt;set $game2 = $games.pluck()&gt;&gt;
+&lt;&lt;set $game3 = $games.pluck()&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $game1 === 1&gt;&gt;
+[[Woorden onthouden|klaar]]
+&lt;&lt;elseif $game1 === 2&gt;&gt;
+[[Rekenen met plus|rekenenPlus]]
+&lt;&lt;elseif $game1 === 3&gt;&gt;
+[[Rekenen met min|rekenenMin]]
+&lt;&lt;elseif $game1 === 4&gt;&gt;
+[[Bieden op pokemons|Bieden]]
+&lt;&lt;elseif $game1 === 5&gt;&gt;
+[[Zelf rekenen|Sommen]]
+&lt;&lt;elseif $game1 === 6&gt;&gt;
+[[Reeks afmaken|Reeks]]
+&lt;&lt;elseif $game1 === 7&gt;&gt;
+[[Getallenvierkant|Square]]
+&lt;&lt;elseif $game1 === 8&gt;&gt;
+[[Rekenen met keer|Keer sommen]] 
+&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;&lt;&lt;if $game2 === 1&gt;&gt;
+[[Woorden onthouden|klaar]]
+&lt;&lt;elseif $game2 === 2&gt;&gt;
+[[Rekenen met plus|rekenenPlus]]
+&lt;&lt;elseif $game2 === 3&gt;&gt;
+[[Rekenen met min|rekenenMin]]
+&lt;&lt;elseif $game2 === 4&gt;&gt;
+[[Bieden op pokemons|Bieden]]
+&lt;&lt;elseif $game2 === 5&gt;&gt;
+[[Zelf rekenen|Sommen]]
+&lt;&lt;elseif $game2 === 6&gt;&gt;
+[[Reeks afmaken|Reeks]]
+&lt;&lt;elseif $game2 === 7&gt;&gt;
+[[Getallenvierkant|Square]]
+&lt;&lt;elseif $game2 === 8&gt;&gt;
+[[Rekenen met keer|Keer sommen]] 
+&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;&lt;&lt;if $game3 === 1&gt;&gt;
+[[Woorden onthouden|klaar]]
+&lt;&lt;elseif $game3 === 2&gt;&gt;
+[[Rekenen met plus|rekenenPlus]]
+&lt;&lt;elseif $game3 === 3&gt;&gt;
+[[Rekenen met min|rekenenMin]]
+&lt;&lt;elseif $game3 === 4&gt;&gt;
+[[Bieden op pokemons|Bieden]]
+&lt;&lt;elseif $game3 === 5&gt;&gt;
+[[Zelf rekenen|Sommen]]
+&lt;&lt;elseif $game3 === 6&gt;&gt;
+[[Reeks afmaken|Reeks]]
+&lt;&lt;elseif $game3 === 7&gt;&gt;
+[[Getallenvierkant|Square]]
+&lt;&lt;elseif $game3 === 8&gt;&gt;
+[[Rekenen met keer|Keer sommen]]
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;else&gt;&gt;
 Welk spel wil je doen?
 &lt;&lt;nobr&gt;&gt;
@@ -1025,11 +1085,11 @@ Welk spel wil je doen?
 [[Rekenen met keer|Keer sommen]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="klaar" tags="" position="623.5,754">Lees de woorden.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="klaar" tags="" position="623.5,754">Lees de woorden.
 
 Onthoud ze goed.
 
-Ik ben er [[klaar|woorden onthouden]] voor.</tw-passagedata><tw-passagedata pid="19" name="Dit is het goede antwoord!Min" tags="" position="1621.5,936">&lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
+Ik ben er [[klaar|woorden onthouden]] voor.</tw-passagedata><tw-passagedata pid="18" name="Dit is het goede antwoord!Min" tags="" position="1621.5,936">&lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
 	&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 		Dat is goed. 
 
@@ -1062,7 +1122,7 @@ Ik ben er [[klaar|woorden onthouden]] voor.</tw-passagedata><tw-passagedata pid=
 
 		Probeer het [[nog eens|rekenenMin]]
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Sommen" tags="" position="1057.5,825.8333435058594">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Sommen" tags="" position="1057.5,825.8333435058594">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $randomizer = random (1, 3)&gt;&gt;
 &lt;&lt;set $number1 = random (4, 12)&gt;&gt;
 &lt;&lt;set $number2 = random (13, 24) + ($difficulty * random (11, 29))&gt;&gt;
@@ -1082,7 +1142,7 @@ Maak de som af.
 $number2 - $number1 = &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;check&quot;&gt;&gt;.
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="21" name="check" tags="" position="1058.5,955.8333435058594">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
+</tw-passagedata><tw-passagedata pid="20" name="check" tags="" position="1058.5,955.8333435058594">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
 &lt;&lt;set $score = $score +1&gt;&gt;
 Goed zo!
 
@@ -1110,7 +1170,7 @@ Jij zei: $number2 - $number1 = &lt;u&gt;$answer&lt;/u&gt;
 Doe het [[nog eens|Sommen]]
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="22" name="Reeks" tags="" position="1219.5,813.5">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Reeks" tags="" position="1219.5,813.5">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $randomizer = random (1, 9)&gt;&gt;
 &lt;&lt;set $number1 = random (1, 9) + ($difficulty * 4)&gt;&gt;
 &lt;&lt;set $number2 = $number1 * 2&gt;&gt;
@@ -1213,7 +1273,7 @@ $number6
 $number7
 $number8
 &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="checkSeries" tags="" position="1223.5,915.5">&lt;&lt;if $answer == $correctAnswer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="checkSeries" tags="" position="1223.5,915.5">&lt;&lt;if $answer == $correctAnswer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
 	&lt;&lt;if $score % 4 === 0&gt;&gt;&lt;&lt;set $collection = $collection + 1&gt;&gt;
 	Goed zo!
 	
@@ -1236,7 +1296,7 @@ Zo gaat de tafel van $randomizer:
 &lt;&lt;print($randomizer*9)&gt;&gt;
 &lt;&lt;print($randomizer*10)&gt;&gt;&lt;/div&gt;
 Doe het [[nog eens|Reeks]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Square" tags="" position="1496.5,820">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Square" tags="" position="1496.5,820">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;
 
 &lt;&lt;set $numbersRow1 = []&gt;&gt;
@@ -1371,7 +1431,7 @@ X = &lt;&lt;textbox &quot;$answerX&quot; &quot;&quot;&gt;&gt;
 
 Y = &lt;&lt;textbox &quot;$answerY&quot; &quot;&quot;&gt;&gt;
 
-[[Klaar|checkSquare]]</tw-passagedata><tw-passagedata pid="25" name="checkSquare" tags="" position="1501.5,950">&lt;&lt;if $difficulty === 0&gt;&gt;
+[[Klaar|checkSquare]]</tw-passagedata><tw-passagedata pid="24" name="checkSquare" tags="" position="1501.5,950">&lt;&lt;if $difficulty === 0&gt;&gt;
 &lt;&lt;if $numberX == $answerX and $numberY == $answerY&gt;&gt;
 Dat klopt. 
 
@@ -1410,7 +1470,7 @@ Dat is niet goed.
 
 Doe het [[nog eens|Square]].
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="checkSquare1" tags="" position="1500.5,1058">&lt;&lt;if $correctAnswer == $answer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="checkSquare1" tags="" position="1500.5,1058">&lt;&lt;if $correctAnswer == $answer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
 	&lt;&lt;if $score % 4 === 0&gt;&gt;&lt;&lt;set $collection = $collection + 1&gt;&gt;
 	Goed zo!
 	
@@ -1423,7 +1483,7 @@ Dat is niet [[goed|Square]].
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="27" name="gek verhaal" tags="" position="1696.5,186">&lt;&lt;nobr&gt;&gt;&lt;div id=&quot;Right&quot;&gt;
+</tw-passagedata><tw-passagedata pid="26" name="gek verhaal" tags="" position="1696.5,186">&lt;&lt;nobr&gt;&gt;&lt;div id=&quot;Right&quot;&gt;
 &lt;&lt;set $answer to &quot;...&quot;&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;/span&gt;
 
 &lt;&lt;link &quot;[sok]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;sok&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1469,7 +1529,7 @@ Ze pakt de
 
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="28" name="Keer sommen" tags="" position="1361.5,812">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Keer sommen" tags="" position="1361.5,812">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $number1 = random (1, 5) + ($difficulty * random (2,5))&gt;&gt;
 &lt;&lt;set $number2 = random (1, 10)&gt;&gt;
 &lt;&lt;set $correctAnswer = $number1 * $number2&gt;&gt;
@@ -1477,7 +1537,7 @@ Ze pakt de
 Maak de som af.
 
 $number1 x $number2 = &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkKeer&quot;&gt;&gt;.
-</tw-passagedata><tw-passagedata pid="29" name="checkKeer" tags="" position="1357.5,919">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
+</tw-passagedata><tw-passagedata pid="28" name="checkKeer" tags="" position="1357.5,919">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
 &lt;&lt;set $score = $score +1&gt;&gt;
 Goed zo!
 
@@ -1496,7 +1556,7 @@ Het moet zijn: $number1 x $number2 = &lt;u&gt;$correctAnswer&lt;/u&gt;
 
 Doe het [[nog eens|Keer sommen]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="30" name="StoryInit" tags="" position="612.5,109.5">&lt;&lt;cacheaudio &quot;bulbasaur&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_bulbasaur.mp3&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="29" name="StoryInit" tags="" position="612.5,109.5">&lt;&lt;cacheaudio &quot;bulbasaur&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_bulbasaur.mp3&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;ivysaur&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_ivysaur.mp3&quot;&gt;&gt;
 
@@ -1797,13 +1857,13 @@ Doe het [[nog eens|Keer sommen]]
 &lt;&lt;cacheaudio &quot;marill&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_marill.mp3&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;mew&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_mew.mp3&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="31" name="Naamloze passage 3" tags="" position="1696,295">/* This should not run*/
+</tw-passagedata><tw-passagedata pid="30" name="Naamloze passage 3" tags="" position="1696,295">/* This should not run*/
 
 This should run
 
 /* This should not run*/
 
-This should run</tw-passagedata><tw-passagedata pid="32" name="Woorden klikken" tags="" position="1590.25,188">
+This should run</tw-passagedata><tw-passagedata pid="31" name="Woorden klikken" tags="" position="1590.25,188">
 &lt;&lt;set $randomizer = random (1, 5)&gt;&gt;
 &lt;&lt;if $randomizer === 1&gt;&gt;
 	&lt;&lt;set $var = &quot;dieren&quot;&gt;&gt;
@@ -1834,7 +1894,7 @@ Wat hoort bij $var?
 &lt;&lt;print $dieren(0)&gt;&gt;
 &lt;&lt;print $answer&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Naamloze passage" tags="" position="1590.25,296">&lt;&lt;link &quot;[muts]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;muts&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="32" name="Naamloze passage" tags="" position="1590.25,296">&lt;&lt;link &quot;[muts]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;muts&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[vis]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;vis&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[kroon]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;kroon&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[toeter]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;toeter&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1850,7 +1910,7 @@ Wat hoort bij $var?
 &lt;&lt;link &quot;[oor]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;oor&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[oog]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;oog&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
 &lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Bieden" tags="" position="1206.25,367">&lt;div id=&quot;tekstBieden&quot;&gt; Koop zo veel pokemons als je kan.
+</tw-passagedata><tw-passagedata pid="33" name="Bieden" tags="" position="1206.25,367">&lt;div id=&quot;tekstBieden&quot;&gt; Koop zo veel pokemons als je kan.
 
 Team Rocket wil ze ook.
 
@@ -1872,7 +1932,7 @@ Je hebt &lt;&lt;print $cash = 25 - ($difficulty * random(5, 8))&gt;&gt; euro.
 &lt;&lt;set $pokemon3 = $pokemon.pluck()&gt;&gt;
 &lt;&lt;set $pokemon4 = $pokemon.pluck()&gt;&gt;
 &lt;&lt;set $pokemon5 = $pokemon.pluck()&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="35" name="Start het bieden!" tags="" position="1213.25,481">&lt;&lt;if $round === 0&gt;&gt;De eerste pokemon is $pokemon1.&lt;&lt;set $round = 1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Start het bieden!" tags="" position="1213.25,481">&lt;&lt;if $round === 0&gt;&gt;De eerste pokemon is $pokemon1.&lt;&lt;set $round = 1&gt;&gt;
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
 Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
@@ -2119,7 +2179,7 @@ Je hebt $pokemonsWon pokemons gered!
 
 Je hebt nu $pokemonsWon [[pokemons|verzameling]] erbij. 
 &lt;&lt;set $collection = $collection + $pokemonsWon&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="offer" tags="" position="1323,479">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="offer" tags="" position="1323,479">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $offer to parseInt($offer, 10)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;if $cash === 0 or ($cash - $offer &lt; 0)&gt;&gt;
 	Je geld is op.
@@ -2174,18 +2234,18 @@ Je hebt nu $pokemonsWon [[pokemons|verzameling]] erbij.
 
 
 
-</tw-passagedata><tw-passagedata pid="37" name="niets" tags="" position="1320,368">Team Rocket heeft nu de pokemon.
+</tw-passagedata><tw-passagedata pid="36" name="niets" tags="" position="1320,368">Team Rocket heeft nu de pokemon.
 
 Jij hebt nog $cash over.
 
-Dat is [[jammer|Start het bieden!]].</tw-passagedata><tw-passagedata pid="38" name="Aanvang" tags="" position="610,228">  &lt;iframe width=&quot;768&quot; height=&quot;432&quot; src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; 
+Dat is [[jammer|Start het bieden!]].</tw-passagedata><tw-passagedata pid="37" name="Aanvang" tags="" position="610,228">  &lt;iframe width=&quot;768&quot; height=&quot;432&quot; src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; 
 
 
 &lt;&lt;set $difficulty to &quot;&quot;&gt;&gt; &lt;span id=&quot;difficulty&quot;&gt;&lt;&lt;print $difficulty&gt;&gt;&lt;/span&gt; 
 &lt;&lt;link &quot;[Makkelijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 0&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Start]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[Moeilijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 1&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Start]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="39" name="Start" tags="" position="611,342">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Start" tags="" position="611,342">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $score = 0&gt;&gt;
 &lt;&lt;set $collection = 0&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;set $collectionMoeilijk = 0&gt;&gt;
@@ -2197,15 +2257,15 @@ Dat is [[jammer|Start het bieden!]].</tw-passagedata><tw-passagedata pid="38" na
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;[[Klik hier|Begin]]&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;/timed&gt;&gt;
  
-&lt;div id=&quot;pikachu&quot;&gt;&lt;img src=&quot;http://www.freeiconspng.com/uploads/pikachu-transparent-hd-1.png&quot; width=&quot;230&quot; height=&quot;300&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="TestVariabelen" tags="" position="377,142">
-&lt;&lt;set $collection = 151&gt;&gt;
+&lt;div id=&quot;pikachu&quot;&gt;&lt;img src=&quot;http://www.freeiconspng.com/uploads/pikachu-transparent-hd-1.png&quot; width=&quot;230&quot; height=&quot;300&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="TestVariabelen" tags="" position="458.6666666666667,368.6666666666667">
+&lt;&lt;set $collection = 149&gt;&gt;
 &lt;&lt;set $score = 0&gt;&gt;
 &lt;&lt;set $collectionMoeilijk = 0&gt;&gt;
 
 &lt;&lt;set $difficulty to &quot;&quot;&gt;&gt; &lt;span id=&quot;difficulty&quot;&gt;&lt;&lt;print $difficulty&gt;&gt;&lt;/span&gt; 
-&lt;&lt;link &quot;[Makkelijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 0&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Bieden]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;[Moeilijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 1&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Bieden]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="41" name="verzamelingMoeilijk" tags="" position="869.5,451">&lt;&lt;if $collectionMoeilijk === 0&gt;&gt;Je doet het moeilijke spel.
+&lt;&lt;link &quot;[Makkelijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 0&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Begin]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;[Moeilijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 1&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Begin]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="40" name="verzamelingMoeilijk" tags="" position="869.5,451">&lt;&lt;if $collectionMoeilijk === 0&gt;&gt;Je doet het moeilijke spel.
 
 Elke keer als je zes gewone pokemons hebt, krijg je hier een extra pokemon. 
 
@@ -2313,7 +2373,7 @@ Ik wil een [[ander spel|Begin]] doen.
 &lt;img src=&quot;http://www.picgifs.com/graphics/p/pokemon/graphics-pokemon-482183.gif&quot;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="offer opslag" tags="" position="1648,403">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="offer opslag" tags="" position="1648,403">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $offer to parseInt($offer, 10)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;if $cash === 0&gt;&gt;
 Je hebt geen geld meer.
@@ -2345,7 +2405,7 @@ Ik bied [[niets] voor deze pokemon.
 	&lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Naamloze passage 2" tags="" position="480.33333333333337,495.8333333333333">&lt;&lt;nobr&gt;&gt; &lt;&lt;set $randomizer = random (1, 4)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="42" name="Naamloze passage 2" tags="" position="1808.6666666666667,444.16666666666663">&lt;&lt;nobr&gt;&gt; &lt;&lt;set $randomizer = random (1, 4)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
 Welk spel wil je doen?
 	&lt;&lt;if $randomizer === 1&gt;&gt;
