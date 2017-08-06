@@ -186,7 +186,9 @@ input[type="text"] {
 
 #einde {
  color: firebrick; 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="InitSom" tags="" position="313.5,418">Vertel me eerst je naam.
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="InitSom" tags="" position="313,417">Vertel me eerst je naam.
 
 Mijn naam is: &lt;&lt;textbox &quot;$player&quot; &quot;Naomi&quot;&gt;&gt;
 
@@ -195,7 +197,7 @@ Ben je klaar?
 Druk dan op de blauwe [[woord]].
 
 &lt;&lt;set $score = 0&gt;&gt;
-&lt;&lt;set $collection = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="rekenenPlus" tags="" position="1737.5,818">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $collection = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="rekenenPlus" tags="" position="1737,818">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $answersGiven = 0&gt;&gt;
 &lt;&lt;set $number1 = random (0, 14)&gt;&gt;
 &lt;&lt;set $number2 = random (1, 12)&gt;&gt;
@@ -219,7 +221,7 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;  
 
-[[Klaar|Dit is het goede antwoord!]]</tw-passagedata><tw-passagedata pid="3" name="Dit is het goede antwoord!" tags="" position="1741.5,935">
+[[Klaar|Dit is het goede antwoord!]]</tw-passagedata><tw-passagedata pid="3" name="Dit is het goede antwoord!" tags="" position="1741,935">
 &lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
 	&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 		Dat is goed. 
@@ -253,7 +255,7 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
 
 		Probeer het [[nog eens|rekenenPlus]]
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="rekenenMin" tags="" position="1615.5,819">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="rekenenMin" tags="" position="1615,819">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $answersGiven = 0&gt;&gt;
 &lt;&lt;set $number1 = random (15, 29)&gt;&gt;
 &lt;&lt;set $number2 = random (2, 14)&gt;&gt;
@@ -277,12 +279,13 @@ Dat is: &lt;&lt;set $answer to 10&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;
  &lt;&lt;link &quot;[+5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer+5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-5]&quot;&gt;&gt;&lt;&lt;set $answer = $answer-5&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;  
 
-[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="5" name="verzameling" tags="" position="794.5,658">&lt;h1&gt;Pokemons van $player&lt;/h1&gt;
+[[Klaar|Dit is het goede antwoord!Min]]</tw-passagedata><tw-passagedata pid="5" name="verzameling" tags="" position="794,658">&lt;h1&gt;Pokemons van $player&lt;/h1&gt;
 
 Ik wil een [[ander spel|Begin]] doen.
 &lt;&lt;if $difficulty === 1&gt;&gt; Dit is het moeilijke spel. Daarom krijg je hier [[extra pokemons|verzamelingMoeilijk]]. &lt;&lt;/if&gt;&gt;
 
 &lt;strong&gt;Klik op SAVES om op te slaan.&lt;/strong&gt;
+Klik [[hier|Mega]] voor de mega evoluties!
 
 Klik op de pokemon voor geluid!
 
@@ -739,7 +742,7 @@ Klik op de pokemon voor geluid!
 &lt;&lt;link &#x27;&lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/151.jpeg&quot;&gt;&#x27;&gt;&gt;&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio mew volume 0.5 play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="6" name="lvl1" tags="" position="304.5,668">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="6" name="lvl1" tags="" position="304,668">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $number1 = random (0, 5)&gt;&gt;
 &lt;&lt;set $number2 = random (1, 5)&gt;&gt;
 &lt;&lt;set $correctAnswer = $number1 + $number2&gt;&gt;
@@ -750,14 +753,14 @@ Dat is: &lt;&lt;set $answer to 0&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;&
 &lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;   \
  &lt;&lt;link &quot;[-1]&quot;&gt;&gt;&lt;&lt;set $answer--&gt;&gt;&lt;&lt;set $answersGiven++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Klaar|Check]]</tw-passagedata><tw-passagedata pid="7" name="woord" tags="" position="316.5,543">Hallo, $player.
+[[Klaar|Check]]</tw-passagedata><tw-passagedata pid="7" name="woord" tags="" position="316,543">Hallo, $player.
 
 Ken jij pokemon?
 
 Haal veel punten, dan krijg je pokemons.
 
 Ik wil eerst [[oefenen]].
-Ik ben [[klaar|lvl1]].</tw-passagedata><tw-passagedata pid="8" name="Check" tags="" position="304.5,807">&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
+Ik ben [[klaar|lvl1]].</tw-passagedata><tw-passagedata pid="8" name="Check" tags="" position="304,807">&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 	&lt;&lt;set $collection = $collection + 1&gt;&gt;
 Goed gedaan, $player.
 
@@ -771,7 +774,7 @@ Nog een [[som|rekenenPlus]]!
 Dat was niet goed.
 
 Probeer het [[nog eens|lvl1]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="oefenen" tags="" position="188.5,544">Druk op +1.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="oefenen" tags="" position="188,543">Druk op +1.
 
 Ga door tot 6.
 
@@ -779,7 +782,7 @@ Ga door tot 6.
 &lt;&lt;link &quot;[+1]&quot;&gt;&gt;&lt;&lt;set $answer++&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt; &lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 Dit is fout. Ik wil [[opnieuw|oefenen]].
-Ik ben [[klaar|klaarOptellen]].</tw-passagedata><tw-passagedata pid="10" name="klaarOptellen" tags="" position="50.5,546">&lt;&lt;if $answer === 6 or $answer &lt; 0&gt;&gt;
+Ik ben [[klaar|klaarOptellen]].</tw-passagedata><tw-passagedata pid="10" name="klaarOptellen" tags="" position="50,546">&lt;&lt;if $answer === 6 or $answer &lt; 0&gt;&gt;
 Druk nu op -1.
 
 Ga door tot 0.
@@ -793,7 +796,7 @@ Ik ben [[klaar|klaarAftrekken]].
 Dat was nog niet goed.
 
 Probeer het [[nog eens|oefenen]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="klaarAftrekken" tags="" position="47.5,679">&lt;&lt;if $answer === 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="klaarAftrekken" tags="" position="47,680">&lt;&lt;if $answer === 0&gt;&gt;
 Goed zo, $player!
 &lt;&lt;set $collection = $collection +1 &gt;&gt;
 Je hebt nu een [[pokemon]].
@@ -801,7 +804,7 @@ Je hebt nu een [[pokemon]].
 Dat was nog niet goed.
 &lt;&lt;set $answer = 6&gt;&gt;
 Probeer het [[nog eens|klaarOptellen]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="pokemon" tags="" position="70.5,809">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="pokemon" tags="" position="70,809">&lt;&lt;nobr&gt;&gt;
 Ik wil verder [[spelen|lvl1]].
 &lt;&lt;/nobr&gt;&gt;
 
@@ -810,7 +813,7 @@ Ik wil verder [[spelen|lvl1]].
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/001.jpeg&quot;&gt; &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $collection &gt;1 &gt;&gt;
 &lt;img src=&quot;http://www.aanhetstrand.nl/pokemon/Print%20all%20Pokemon%20pics_bestanden/002.jpeg&quot;&gt; &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="woorden onthouden" tags="" position="618.5,884.8333435058594">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $words = [ &quot;aap&quot;, &quot;noot&quot;, &quot;vis&quot;, &quot;vuur&quot;, &quot;boom&quot;, &quot;zus&quot;, &quot;papa&quot;, &quot;mama&quot;, &quot;man&quot;, &quot;kind&quot;, &quot;hoog&quot;, &quot;laag&quot;, &quot;pet&quot;, &quot;kat&quot;, &quot;fles&quot;, &quot;lamp&quot;, &quot;bloem&quot;, &quot;stoel&quot;, &quot;vrouw&quot;, &quot;gras&quot;, &quot;mat&quot;, &quot;vloer&quot;, &quot;tafel&quot;, &quot;kom&quot;, &quot;hond&quot;, &quot;haar&quot;, &quot;net&quot;, &quot;pak&quot;, &quot;sok&quot;, &quot;broek&quot;, &quot;uil&quot;, &quot;doos&quot;, &quot;hard&quot;, &quot;zacht&quot;, &quot;melk&quot;, &quot;brood&quot;, &quot;koek&quot;, &quot;pot&quot;, &quot;zak&quot;, &quot;hek&quot;, &quot;nek&quot;, &quot;buik&quot;, &quot;voet&quot;, &quot;been&quot;, &quot;hand&quot;, &quot;mond&quot;, &quot;neus&quot;, &quot;arm&quot;, &quot;pols&quot;, &quot;knie&quot;, &quot;oor&quot;, &quot;oog&quot;, &quot;vork&quot;, &quot;lepel&quot;, &quot;mes&quot;, &quot;bord&quot;, &quot;jas&quot;, &quot;das&quot;, &quot;trui&quot;, &quot;bal&quot;, &quot;klein&quot;, &quot;groot&quot;, &quot;zeep&quot;, &quot;water&quot;, &quot;bos&quot;, &quot;bes&quot;, &quot;bus&quot;, &quot;bas&quot;, &quot;koe&quot;, &quot;schaap&quot;, &quot;lam&quot;, &quot;big&quot;, &quot;poes&quot;, &quot;geit&quot;, &quot;ijs&quot;, &quot;soep&quot;, &quot;stok&quot; ]&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="woorden onthouden" tags="" position="618,884">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $words = [ &quot;aap&quot;, &quot;noot&quot;, &quot;vis&quot;, &quot;vuur&quot;, &quot;boom&quot;, &quot;zus&quot;, &quot;papa&quot;, &quot;mama&quot;, &quot;man&quot;, &quot;kind&quot;, &quot;hoog&quot;, &quot;laag&quot;, &quot;pet&quot;, &quot;kat&quot;, &quot;fles&quot;, &quot;lamp&quot;, &quot;bloem&quot;, &quot;stoel&quot;, &quot;vrouw&quot;, &quot;gras&quot;, &quot;mat&quot;, &quot;vloer&quot;, &quot;tafel&quot;, &quot;kom&quot;, &quot;hond&quot;, &quot;haar&quot;, &quot;net&quot;, &quot;pak&quot;, &quot;sok&quot;, &quot;broek&quot;, &quot;uil&quot;, &quot;doos&quot;, &quot;hard&quot;, &quot;zacht&quot;, &quot;melk&quot;, &quot;brood&quot;, &quot;koek&quot;, &quot;pot&quot;, &quot;zak&quot;, &quot;hek&quot;, &quot;nek&quot;, &quot;buik&quot;, &quot;voet&quot;, &quot;been&quot;, &quot;hand&quot;, &quot;mond&quot;, &quot;neus&quot;, &quot;arm&quot;, &quot;pols&quot;, &quot;knie&quot;, &quot;oor&quot;, &quot;oog&quot;, &quot;vork&quot;, &quot;lepel&quot;, &quot;mes&quot;, &quot;bord&quot;, &quot;jas&quot;, &quot;das&quot;, &quot;trui&quot;, &quot;bal&quot;, &quot;klein&quot;, &quot;groot&quot;, &quot;zeep&quot;, &quot;water&quot;, &quot;bos&quot;, &quot;bes&quot;, &quot;bus&quot;, &quot;bas&quot;, &quot;koe&quot;, &quot;schaap&quot;, &quot;lam&quot;, &quot;big&quot;, &quot;poes&quot;, &quot;geit&quot;, &quot;ijs&quot;, &quot;soep&quot;, &quot;stok&quot; ]&gt;&gt;
 
 &lt;&lt;set $word = $words.pluck()&gt;&gt;
 &lt;&lt;set $word1 = $words.pluck()&gt;&gt;
@@ -829,7 +832,7 @@ Ik wil verder [[spelen|lvl1]].
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#words&quot;&gt;&gt;[[Klaar|wordChecker]].&lt;&lt;/replace&gt;&gt;\
   &lt;&lt;/timed&gt;&gt;
  
-</tw-passagedata><tw-passagedata pid="14" name="wordChecker" tags="" position="736.5,1027.8333435058594">Dit is [[goed]].
+</tw-passagedata><tw-passagedata pid="14" name="wordChecker" tags="" position="736,1027">Dit is [[goed]].
 Oeps, dat is [[fout|wordChecker]].&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $answerRandomizer = random (1, 5)&gt;&gt;
 &lt;&lt;set $correctAnswer = 0&gt;&gt;
@@ -944,7 +947,7 @@ Oeps, dat is [[fout|wordChecker]].&lt;&lt;nobr&gt;&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="15" name="goed" tags="" position="820.5,885.8333435058594">&lt;&lt;if $correctAnswer === 1 and $correctAnswer1 === 1 and $correctAnswer2 === 1 and $correctAnswer3 === 1 and $correctAnswer4 === 0 and $correctAnswer5 === 0 and $correctAnswer6 === 0 and $correctAnswer7 === 0&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="15" name="goed" tags="" position="820,885">&lt;&lt;if $correctAnswer === 1 and $correctAnswer1 === 1 and $correctAnswer2 === 1 and $correctAnswer3 === 1 and $correctAnswer4 === 0 and $correctAnswer5 === 0 and $correctAnswer6 === 0 and $correctAnswer7 === 0&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
 Goed zo! 
 
 Ga zo door.
@@ -960,7 +963,7 @@ $word1
 $word2
 $word3
 Probeer het [[nog eens|woorden onthouden]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Begin" tags="" position="620.5,549">&lt;&lt;if $collection === 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Begin" tags="" position="620,549">&lt;&lt;if $collection === 0&gt;&gt;
 [[Leren|InitSom]] hoe het werkt.
 &lt;&lt;elseif $collection &gt; 150&gt;&gt;&lt;div id=&quot;einde&quot;&gt;
 Je hebt nu alle pokemons in het spel. Je kunt verder spelen, maar je krijgt dan geen pokemons meer.&lt;/div&gt;
@@ -1085,11 +1088,11 @@ Welk spel wil je doen?
 [[Rekenen met keer|Keer sommen]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="klaar" tags="" position="623.5,754">Lees de woorden.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="klaar" tags="" position="623,754">Lees de woorden.
 
 Onthoud ze goed.
 
-Ik ben er [[klaar|woorden onthouden]] voor.</tw-passagedata><tw-passagedata pid="18" name="Dit is het goede antwoord!Min" tags="" position="1621.5,936">&lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
+Ik ben er [[klaar|woorden onthouden]] voor.</tw-passagedata><tw-passagedata pid="18" name="Dit is het goede antwoord!Min" tags="" position="1621,936">&lt;&lt;if $answersGiven &gt; $maxAnswers&gt;&gt;
 	&lt;&lt;if $answer === $correctAnswer&gt;&gt; 
 		Dat is goed. 
 
@@ -1122,7 +1125,7 @@ Ik ben er [[klaar|woorden onthouden]] voor.</tw-passagedata><tw-passagedata pid=
 
 		Probeer het [[nog eens|rekenenMin]]
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Sommen" tags="" position="1057.5,825.8333435058594">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Sommen" tags="" position="1057,825">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $randomizer = random (1, 3)&gt;&gt;
 &lt;&lt;set $number1 = random (4, 12)&gt;&gt;
 &lt;&lt;set $number2 = random (13, 24) + ($difficulty * random (11, 29))&gt;&gt;
@@ -1142,7 +1145,7 @@ Maak de som af.
 $number2 - $number1 = &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;check&quot;&gt;&gt;.
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="20" name="check" tags="" position="1058.5,955.8333435058594">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
+</tw-passagedata><tw-passagedata pid="20" name="check" tags="" position="1058,955">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
 &lt;&lt;set $score = $score +1&gt;&gt;
 Goed zo!
 
@@ -1170,7 +1173,7 @@ Jij zei: $number2 - $number1 = &lt;u&gt;$answer&lt;/u&gt;
 Doe het [[nog eens|Sommen]]
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="21" name="Reeks" tags="" position="1219.5,813.5">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Reeks" tags="" position="1218,814">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $randomizer = random (1, 9)&gt;&gt;
 &lt;&lt;set $number1 = random (1, 9) + ($difficulty * 4)&gt;&gt;
 &lt;&lt;set $number2 = $number1 * 2&gt;&gt;
@@ -1273,7 +1276,7 @@ $number6
 $number7
 $number8
 &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkSeries&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="checkSeries" tags="" position="1223.5,915.5">&lt;&lt;if $answer == $correctAnswer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="checkSeries" tags="" position="1223,915">&lt;&lt;if $answer == $correctAnswer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
 	&lt;&lt;if $score % 4 === 0&gt;&gt;&lt;&lt;set $collection = $collection + 1&gt;&gt;
 	Goed zo!
 	
@@ -1296,7 +1299,7 @@ Zo gaat de tafel van $randomizer:
 &lt;&lt;print($randomizer*9)&gt;&gt;
 &lt;&lt;print($randomizer*10)&gt;&gt;&lt;/div&gt;
 Doe het [[nog eens|Reeks]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Square" tags="" position="1496.5,820">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Square" tags="" position="1496,820">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;
 
 &lt;&lt;set $numbersRow1 = []&gt;&gt;
@@ -1431,7 +1434,7 @@ X = &lt;&lt;textbox &quot;$answerX&quot; &quot;&quot;&gt;&gt;
 
 Y = &lt;&lt;textbox &quot;$answerY&quot; &quot;&quot;&gt;&gt;
 
-[[Klaar|checkSquare]]</tw-passagedata><tw-passagedata pid="24" name="checkSquare" tags="" position="1501.5,950">&lt;&lt;if $difficulty === 0&gt;&gt;
+[[Klaar|checkSquare]]</tw-passagedata><tw-passagedata pid="24" name="checkSquare" tags="" position="1501,950">&lt;&lt;if $difficulty === 0&gt;&gt;
 &lt;&lt;if $numberX == $answerX and $numberY == $answerY&gt;&gt;
 Dat klopt. 
 
@@ -1470,7 +1473,7 @@ Dat is niet goed.
 
 Doe het [[nog eens|Square]].
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="checkSquare1" tags="" position="1500.5,1058">&lt;&lt;if $correctAnswer == $answer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="checkSquare1" tags="" position="1500,1058">&lt;&lt;if $correctAnswer == $answer&gt;&gt; &lt;&lt;set $score = $score + 1&gt;&gt;
 	&lt;&lt;if $score % 4 === 0&gt;&gt;&lt;&lt;set $collection = $collection + 1&gt;&gt;
 	Goed zo!
 	
@@ -1483,7 +1486,7 @@ Dat is niet [[goed|Square]].
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="26" name="gek verhaal" tags="" position="1696.5,186">&lt;&lt;nobr&gt;&gt;&lt;div id=&quot;Right&quot;&gt;
+</tw-passagedata><tw-passagedata pid="26" name="gek verhaal" tags="" position="1696,186">&lt;&lt;nobr&gt;&gt;&lt;div id=&quot;Right&quot;&gt;
 &lt;&lt;set $answer to &quot;...&quot;&gt;&gt; &lt;span id=&quot;answer&quot;&gt;&lt;/span&gt;
 
 &lt;&lt;link &quot;[sok]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;sok&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1529,7 +1532,7 @@ Ze pakt de
 
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="27" name="Keer sommen" tags="" position="1361.5,812">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Keer sommen" tags="" position="1361,812">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $number1 = random (1, 5) + ($difficulty * random (2,5))&gt;&gt;
 &lt;&lt;set $number2 = random (1, 10)&gt;&gt;
 &lt;&lt;set $correctAnswer = $number1 * $number2&gt;&gt;
@@ -1537,7 +1540,7 @@ Ze pakt de
 Maak de som af.
 
 $number1 x $number2 = &lt;&lt;textbox &quot;$answer&quot; &quot;&quot; &quot;checkKeer&quot;&gt;&gt;.
-</tw-passagedata><tw-passagedata pid="28" name="checkKeer" tags="" position="1357.5,919">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
+</tw-passagedata><tw-passagedata pid="28" name="checkKeer" tags="" position="1357,919">&lt;&lt;if $answer == $correctAnswer&gt;&gt;
 &lt;&lt;set $score = $score +1&gt;&gt;
 Goed zo!
 
@@ -1556,7 +1559,7 @@ Het moet zijn: $number1 x $number2 = &lt;u&gt;$correctAnswer&lt;/u&gt;
 
 Doe het [[nog eens|Keer sommen]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="29" name="StoryInit" tags="" position="612.5,109.5">&lt;&lt;cacheaudio &quot;bulbasaur&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_bulbasaur.mp3&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="29" name="StoryInit" tags="" position="609,113">&lt;&lt;cacheaudio &quot;bulbasaur&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_bulbasaur.mp3&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;ivysaur&quot; &quot;http://www.pokemon-paradijs.com/pokedex/entry/pokedex_ivysaur.mp3&quot;&gt;&gt;
 
@@ -1863,7 +1866,7 @@ This should run
 
 /* This should not run*/
 
-This should run</tw-passagedata><tw-passagedata pid="31" name="Woorden klikken" tags="" position="1590.25,188">
+This should run</tw-passagedata><tw-passagedata pid="31" name="Woorden klikken" tags="" position="1590,188">
 &lt;&lt;set $randomizer = random (1, 5)&gt;&gt;
 &lt;&lt;if $randomizer === 1&gt;&gt;
 	&lt;&lt;set $var = &quot;dieren&quot;&gt;&gt;
@@ -1894,7 +1897,7 @@ Wat hoort bij $var?
 &lt;&lt;print $dieren(0)&gt;&gt;
 &lt;&lt;print $answer&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="32" name="Naamloze passage" tags="" position="1590.25,296">&lt;&lt;link &quot;[muts]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;muts&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="32" name="Naamloze passage" tags="" position="1590,296">&lt;&lt;link &quot;[muts]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;muts&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[vis]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;vis&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[kroon]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;kroon&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[toeter]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;toeter&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1910,7 +1913,7 @@ Wat hoort bij $var?
 &lt;&lt;link &quot;[oor]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;oor&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;&lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[oog]&quot;&gt;&gt;&lt;&lt;set $answer to &quot;oog&quot;&gt;&gt;&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
 &lt;&lt;print $answer&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Bieden" tags="" position="1206.25,367">&lt;div id=&quot;tekstBieden&quot;&gt; Koop zo veel pokemons als je kan.
+</tw-passagedata><tw-passagedata pid="33" name="Bieden" tags="" position="1206,367">&lt;div id=&quot;tekstBieden&quot;&gt; Koop zo veel pokemons als je kan.
 
 Team Rocket wil ze ook.
 
@@ -1932,7 +1935,7 @@ Je hebt &lt;&lt;print $cash = 25 - ($difficulty * random(5, 8))&gt;&gt; euro.
 &lt;&lt;set $pokemon3 = $pokemon.pluck()&gt;&gt;
 &lt;&lt;set $pokemon4 = $pokemon.pluck()&gt;&gt;
 &lt;&lt;set $pokemon5 = $pokemon.pluck()&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Start het bieden!" tags="" position="1213.25,481">&lt;&lt;if $round === 0&gt;&gt;De eerste pokemon is $pokemon1.&lt;&lt;set $round = 1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Start het bieden!" tags="" position="1213,481">&lt;&lt;if $round === 0&gt;&gt;De eerste pokemon is $pokemon1.&lt;&lt;set $round = 1&gt;&gt;
 Team Rocket biedt &lt;&lt;print $tr = random (1, 3)&gt;&gt;.
 
 Ik bied &lt;&lt;textbox &quot;$offer&quot; &quot;&quot; &quot;offer&quot;&gt;&gt;.
@@ -2234,12 +2237,11 @@ Je hebt nu $pokemonsWon [[pokemons|verzameling]] erbij.
 
 
 
-</tw-passagedata><tw-passagedata pid="36" name="niets" tags="" position="1320,368">Team Rocket heeft nu de pokemon.
+</tw-passagedata><tw-passagedata pid="36" name="niets" tags="" position="1319,368">Team Rocket heeft nu de pokemon.
 
 Jij hebt nog $cash over.
 
-Dat is [[jammer|Start het bieden!]].</tw-passagedata><tw-passagedata pid="37" name="Aanvang" tags="" position="610,228">  &lt;iframe width=&quot;768&quot; height=&quot;432&quot; src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; 
-
+Dat is [[jammer|Start het bieden!]].</tw-passagedata><tw-passagedata pid="37" name="Aanvang" tags="" position="610,228">  &lt;iframe width=&quot;768&quot; height=&quot;432&quot; src=&quot;https://www.youtube.com/embed/sb-evhgxFZA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;&lt;set $difficulty to &quot;&quot;&gt;&gt; &lt;span id=&quot;difficulty&quot;&gt;&lt;&lt;print $difficulty&gt;&gt;&lt;/span&gt; 
 &lt;&lt;link &quot;[Makkelijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 0&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|Start]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -2247,10 +2249,12 @@ Dat is [[jammer|Start het bieden!]].</tw-passagedata><tw-passagedata pid="37" na
 
 Beta 1.0
 
-</tw-passagedata><tw-passagedata pid="38" name="Start" tags="" position="611,342">&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Start" tags="" position="611,341">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $score = 0&gt;&gt;
-&lt;&lt;set $collection = 0&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;set $collectionMoeilijk = 0&gt;&gt;
+&lt;&lt;set $collection = 0&gt;&gt;
+&lt;&lt;set $collectionMoeilijk = 0&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+Ik ben Naomi zelf. Ik heb bij Erwin en Eveline al 35 pokemons verdiend. Ik wil verder gaan [[waar ik gebleven was|Begin][$difficulty = 0, $collection = 35, $player = &quot;Naomi&quot;]].
+
 &lt;div id=&quot;intro&quot;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;HET&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;\ 
  &lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;GROTE&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;&lt;&lt;print &quot;POKEMON&quot;&gt;&gt;
@@ -2259,7 +2263,7 @@ Beta 1.0
  &lt;&lt;next&gt;&gt;&lt;&lt;replace &quot;#intro&quot;&gt;&gt;&lt;span class=&quot;groot&quot;&gt;[[Klik hier|Begin]]&lt;/span&gt;&lt;&lt;/replace&gt;&gt;\
  &lt;&lt;/timed&gt;&gt;
  
-&lt;div id=&quot;pikachu&quot;&gt;&lt;img src=&quot;http://www.freeiconspng.com/uploads/pikachu-transparent-hd-1.png&quot; width=&quot;230&quot; height=&quot;300&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="TestVariabelen" tags="" position="308.6666666666665,227">
+&lt;div id=&quot;pikachu&quot;&gt;&lt;img src=&quot;http://www.freeiconspng.com/uploads/pikachu-transparent-hd-1.png&quot; width=&quot;230&quot; height=&quot;300&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="TestVariabelen" tags="" position="308,227">
 &lt;&lt;set $collection = 149&gt;&gt;
 &lt;&lt;set $score = 0&gt;&gt;
 &lt;&lt;set $collectionMoeilijk = 0&gt;&gt;
@@ -2267,7 +2271,7 @@ Beta 1.0
 &lt;&lt;set $difficulty to &quot;&quot;&gt;&gt; &lt;span id=&quot;difficulty&quot;&gt;&lt;&lt;print $difficulty&gt;&gt;&lt;/span&gt; 
 &lt;&lt;link &quot;[Makkelijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 0&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|ding]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;[Moeilijk]&quot;&gt;&gt;&lt;&lt;set $difficulty to 1&gt;&gt;&lt;&lt;replace &quot;#difficulty&quot;&gt;&gt; [[START|ding]&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="40" name="verzamelingMoeilijk" tags="" position="869.5,451">&lt;&lt;if $collectionMoeilijk === 0&gt;&gt;Je doet het moeilijke spel.
+</tw-passagedata><tw-passagedata pid="40" name="verzamelingMoeilijk" tags="" position="869,451">&lt;&lt;if $collectionMoeilijk === 0&gt;&gt;Je doet het moeilijke spel.
 
 Elke keer als je zes gewone pokemons hebt, krijg je hier een extra pokemon. 
 
@@ -2407,7 +2411,7 @@ Ik bied [[niets] voor deze pokemon.
 	&lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="42" name="Naamloze passage 2" tags="" position="1808.6666666666667,444.16666666666663">&lt;&lt;nobr&gt;&gt; &lt;&lt;set $randomizer = random (1, 4)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="42" name="Naamloze passage 2" tags="" position="1808,444">&lt;&lt;nobr&gt;&gt; &lt;&lt;set $randomizer = random (1, 4)&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
 Welk spel wil je doen?
 	&lt;&lt;if $randomizer === 1&gt;&gt;
@@ -2423,7 +2427,114 @@ Welk spel wil je doen?
 [[Getallenvierkant|Square]
 [[Rekenen met keer|Keer sommen]
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Mega" tags="" position="750,365.5">Houndoom
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Houndoom-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Houndoom
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaHoundoom-Pokemon-X-and-Y.jpg&quot;&gt;
+&lt;&lt;if $collection &gt; 3&gt;&gt;Manectric
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Manectric-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Manectric
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaManectric-Pokemon-X-and-Y.jpg&quot;&gt;
+Aerodactyl
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Aerodactyl-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Aerodactyl
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaAerodactyl-Pokemon-X-and-Y.jpg&quot;&gt;
+Gyarados
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Gyarados-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Gyarados
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaGyarados-Pokemon-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $collection &gt; 10&gt;&gt;
+Alakazam
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Alakazam-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Alakazam
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaAlakazam-Pokemon-X-and-Y.jpg&quot;&gt;
+Abomasnow
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Abomasnow-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Abomasnow
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaAbomasnow-Pokemon-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 20&gt;&gt;Heracross
+Pinsir
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Pinsir-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Pinsir
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaPinsir-Pokemon-X-and-Y.jpg&quot;&gt;
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Heracross-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Heracross
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaHeracross-Pokemon-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 30&gt;&gt;Gardevoir
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Gardevoir-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Gardevoir
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaGardevoir-Pokemon-X-and-Y.jpg&quot;&gt;
+Medicham
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Medicham-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Medicham
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaMedicham-Pokemon-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 40&gt;&gt;Scizor
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Scizor-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Scizor
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaScizor-Pokemon-X-and-Y.jpg&quot;&gt;
+Banette
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Banette-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Banette
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaBanette-Pokemon-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 50&gt;&gt;Tyranitar
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Tyranitar-X-and-Y.jpg&quot;&gt;
+Mega Tyranitar
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaTyranitar-X-and-Y.jpg&quot;&gt;
+Aggron
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Aggron-X-and-Y.jpg&quot;&gt;
+Mega Aggron
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaAggron-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 60&gt;&gt;Gengar
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Gengar-X-and-Y.jpg&quot;&gt;
+Mega Gengar
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaGengar-X-and-Y.jpg&quot;&gt;
+Kangaskhan
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Kangaskhan-X-and-Y.jpg&quot;&gt;
+Mega Kangaskhan
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/MegaKangaskhan-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 70&gt;&gt;Charizard
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Charizard-X-and-Y.jpg&quot;&gt;
+Mega Charizard X
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Charizard_X-X-and-Y.jpg&quot;&gt;
+Mega Charizard Y
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Charizard-X-and-Y.jpg&quot;&gt;
+Mewtwo
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mewtwo-Pokemon-X-and-Y.jpg&quot;&gt;
+Mega Mewtwo X
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_MewtwoX-X-and-Y.jpg&quot;&gt;
+Mega Mewtwo Y
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/New-Pokemon-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 80&gt;&gt;Garchomp
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Garchomp-X-and-Y.jpg&quot;&gt;
+Mega Garchomp
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Garchomp-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 90&gt;&gt;Venusaur
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Venusaur-X-and-Y.jpg&quot;&gt;
+Mega Venusaur
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Venusaur-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 100&gt;&gt;Blastoise
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Blastoise-X-and-Y.jpg&quot;&gt;
+Mega Blastoise
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Blastoise-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 110&gt;&gt;Ampharos
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Ampharos-X-and-Y.jpg&quot;&gt;
+Mega Ampharos
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Ampharos-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 120&gt;&gt;Absol
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Absol-X-and-Y.jpg&quot;&gt;
+Mega Absol
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Absol-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 130&gt;&gt;Mawile
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mawile-X-and-Y.jpg&quot;&gt;
+Mega Mawile
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Mawile-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 140&gt;&gt;Lucario
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Lucario.jpg&quot;&gt;
+Mega Lucario
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Lucario-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $collection &gt; 150&gt;&gt;Blaziken
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Blaziken.jpg&quot;&gt;
+Mega Blaziken
+&lt;img src=&quot;http://www.pokemonxy.com/_ui/img/_en/art/Mega_Blaziken-X-and-Y.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){if(0===arguments.length)throw new Error("_random called with insufficient parameters");var e=void 0,t=void 0;if(1===arguments.length?(e=0,t=arguments[0]):(e=arguments[0],t=arguments[1]),e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e,t,r){var n=t,a=r;return 2===arguments.length&&(a=n,n=0),Array.isArray(e)?e.random(n,a):e.hasOwnProperty("length")?[].concat(_toConsumableArray(e)).random(n,a):void 0}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),Array.prototype.splice.call(this,_random(n,a),1)[0]}}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var r=this.length>>>0;if(0!==r){var n=e,a=t;return 1===arguments.length&&(a=n,n=0),null==n?n=0:n<0?(n=r+n,n<0&&(n=0)):n>=r&&(n=r-1),null==a?a=r-1:a<0?(a=r+a,a<0&&(a=r-1)):a>=r&&(a=r-1),this[_random(n,a)]}}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0!==e){for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1)),n=[this[r],this[t]];this[t]=n[0],this[r]=n[1]}return this}}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e={userAgent:navigator.userAgent.toLowerCase()};return e.isGecko=navigator&&"Gecko"===navigator.product&&!/webkit|trident/.test(e.userAgent),e.isIE=/msie|trident/.test(e.userAgent)&&!e.userAgent.includes("opera"),e.ieVersion=function(){var t=/(?:msie\s+|rv:)(\d{1,2}\.\d)/.exec(e.userAgent);return t?Number([1]):0}(),e.isOpera=e.userAgent.includes("opera")||e.userAgent.includes(" opr/"),e.operaVersion=function(){var t=new RegExp((/applewebkit|chrome/.test(e.userAgent)?"opr":"version")+"\\/(\\d{1,2}\\.\\d+)"),r=t.exec(e.userAgent);return r?Number(r[1]):0}(),e.isMobile=Object.freeze({Android:/android/.test(e.userAgent),BlackBerry:/blackberry/.test(e.userAgent),iOS:/ip(?:hone|ad|od)/.test(e.userAgent),Windows:/iemobile/.test(e.userAgent),any:function(){var t=e.isMobile;return t.Android||t.BlackBerry||t.iOS||t.Windows}}),Object.freeze(e)}(),Has=function(){function e(e){try{if(null!=e&&e.length>=0){var t="SugarCube.WebStorage.Test",r="1701 Guilty Scott";if(e.setItem(t,r),e.getItem(t)===r)return e.removeItem(t),!0}}catch(e){}return!1}return Object.freeze({audio:"function"==typeof document.createElement("audio").canPlayType,fileAPI:"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15),geolocation:"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition,localStorage:"localStorage"in window&&e(window.localStorage),sessionStorage:"sessionStorage"in window&&e(window.sessionStorage)})}(),_ref4=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e)||e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return i(e,t)}).join(", ");if(e instanceof Map){var r=function(){var r=i,n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return{v:"( "+n+" )"}}();if("object"===("undefined"==typeof r?"undefined":_typeof(r)))return r.v}else{if(e instanceof Date)return e.toLocaleString();if("function"==typeof e.toString)return e.toString()}return Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref4.clone,convertBreaks=_ref4.convertBreaks,safeActiveElement=_ref4.safeActiveElement,setPageElement=_ref4.setPageElement,throwError=_ref4.throwError,toStringOrDefault=_ref4.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function r(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function n(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function a(e){if(null==e)return"";var t=String(e);return t&&p.test(t)?t.replace(f,function(e){return h[e]}):t}function i(e){if(null==e)return"";var t=String(e);return t&&m.test(t)?t.replace(g,function(e){return v[e]}):t}function o(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function s(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function u(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function l(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}function c(e,t){for(var r=Object.prototype.toString,n=Array.isArray(e),a=[].concat(Object.keys(e),Object.keys(t)).sort().filter(function(e,t,r){return 0===t||r[t-1]!==e}),i={},o=void 0,s=function(e){return e===o},u=0,l=a.length;u<l;++u){var c=a[u],d=e[c],f=t[c];if(e.hasOwnProperty(c))if(t.hasOwnProperty(c)){if(d===f)continue;if(("undefined"==typeof d?"undefined":_typeof(d))===("undefined"==typeof f?"undefined":_typeof(f)))if("function"==typeof d)d.toString()!==f.toString()&&(i[c]=[y.Copy,f]);else if("object"!==("undefined"==typeof d?"undefined":_typeof(d))||null===d)i[c]=[y.Copy,f];else{var p=r.call(d),h=r.call(f);if(p===h)if("[object Date]"===p){var g=Number(f);Number(d)!==g&&(i[c]=[y.CopyDate,g])}else if("[object RegExp]"===p)d.toString()!==f.toString()&&(i[c]=[y.Copy,clone(f)]);else{var m=Util.diff(d,f);null!==m&&(i[c]=m)}else i[c]=[y.Copy,clone(f)]}else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}else if(n&&Util.isNumeric(c)){var v=Number(c);if(!o){o="";do o+="~";while(a.some(s));i[o]=[y.SpliceArray,v,v]}v<i[o][1]&&(i[o][1]=v),v>i[o][2]&&(i[o][2]=v)}else i[c]=y.Delete;else i[c]=[y.Copy,"object"!==("undefined"==typeof f?"undefined":_typeof(f))||null===f?f:clone(f)]}return Object.keys(i).length>0?i:null}function d(e,t){for(var r=Object.keys(t||{}),n=clone(e),a=0,i=r.length;a<i;++a){var o=r[a],s=t[o];if(s===y.Delete)delete n[o];else if(Array.isArray(s))switch(s[0]){case y.SpliceArray:n.splice(s[1],1+(s[2]-s[1]));break;case y.Copy:n[o]=clone(s[1]);break;case y.CopyDate:n[o]=new Date(s[1])}else n[o]=Util.patch(n[o],s)}return n}var f=/[&<>"'`]/g,p=new RegExp(f.source),h=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),g=/&(?:amp|lt|gt|quot|apos|#39|#x27|#96|#x60);/g,m=new RegExp(g.source),v=Object.freeze({"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"}),y=e({Delete:0,SpliceArray:1,Copy:2,CopyDate:3});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},isNumeric:{value:t},isBoolean:{value:r},slugify:{value:n},escape:{value:a},unescape:{value:i},fromCssTime:{value:o},toCssTime:{value:s},fromCssProperty:{value:u},parseUrl:{value:l},DiffOp:{value:y},diff:{value:c},patch:{value:d},random:{value:Math.random},entityEncode:{value:a},entityDecode:{value:i},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(v,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');if(!e.hasOwnProperty("format"))throw new Error('source object missing required "format" property');var l=a(e.format);null!==l&&(t={src:e.src,type:l});break;default:throw new Error("invalid source value (type: "+("undefined"==typeof e?"undefined":_typeof(e))+")")}if(null!==t){var c=document.createElement("source");c.src=t.src,c.type=t.type,o.appendChild(c),i.push(t)}}),!o.hasChildNodes())if(Browser.isIE)o.src=undefined;else{var s=document.createElement("source");s.src=undefined,s.type=undefined,o.appendChild(s)}this._finalize(o,i,clone(t))}},{key:"_copy",value:function(t){if(!(t instanceof e))throw new Error("original parameter must be an instance of AudioWrapper");this._finalize(t.audio.cloneNode(!0),clone(t.sources),clone(t.originalSources))}},{key:"_finalize",value:function(e,t,r){var n=this;Object.defineProperties(this,{audio:{configurable:!0,value:e},sources:{configurable:!0,value:Object.freeze(t)},originalSources:{configurable:!0,value:Object.freeze(r)},_error:{writable:!0,value:!1},_faderId:{writable:!0,value:null},_mute:{writable:!0,value:!1},_rate:{writable:!0,value:1},_volume:{writable:!0,value:1}}),jQuery(this.audio).on("loadstart",function(){return n._error=!1}).on("error",function(){return n._error=!0}).find("source:last-of-type").on("error",function(){return n._trigger("error")}),SimpleAudio.subscribe(this,function(e){if(!n.audio)return void SimpleAudio.unsubscribe(n);switch(e){case"mute":n._updateAudioMute();break;case"rate":n._updateAudioRate();break;case"stop":n.stop();break;case"volume":n._updateAudioVolume()}}),this.load()}},{key:"_trigger",value:function(e){jQuery(this.audio).triggerHandler(e)}},{key:"clone",value:function(){return new e(this)}},{key:"destroy",value:function(){SimpleAudio.unsubscribe(this),this.fadeStop(),this.stop();
